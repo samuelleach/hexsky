@@ -1,0 +1,34 @@
+lName               RA(hhmmss)  DEC(ddmmss)   (J2000)
+B2Kd             : 05 40 00    -45 00 00
+MAXIPOL (night)  : 14 50 43     74 09 42
+BICEP            : 00 00 00    -62 00 00
+ELAIS S1         : 00 34 44    -43 28 12
+GOODS-S          : 03 32 28    -27 48 30
+ELAIS S2         : 05 02 24    -30 35 55
+Carina           : 10 44 00    -59 40 00
+Chapin Field     : 05 06 00    -43 20 00
+--------------   : 00 00 00     00 00 00
+OH231.8          : 07 42 16.9  -14 42 49.1
+VYCMa            : 07 22 58.1  -25 46 01.8
+G259.94-0.04     : 08 35 31.5  -40 38 28
+G269.15-1.13     : 09 03 32.3  -48 28 00
+Ceres            : -2  0  0      0  0  0
+Pallas           : -2  0  0      0  0  0
+Vesta            : -2  0  0      0  0  0
+Hygiea           : -2  0  0      0  0  0
+Egeria           : -2  0  0      0  0  0
+Amphitrite       : -2  0  0      0  0  0
+Eugenia          : -2  0  0      0  0  0
+Bamberga         : -2  0  0      0  0  0
+Davida           : -2  0  0      0  0  0
+Herculina        : -2  0  0      0  0  0
+Beta UMi         :  14 50 42    74 09 19
+Polaris          :  02 31 50    89 15 51
+Gamma UMa        :  11 53 50    53 41 41
+Gamma Virgo      :  12 41 40   -01 26 57
+Arcturus         :  14 15 40    19 10 57
+Cas A            :  23 23 56    58 48 00
+JUPITER          : -1  0  0      0  0  0   
+MARS             : -1  0  0      0  0  0   
+SATURN           : -1  0  0      0  0  0   
+END

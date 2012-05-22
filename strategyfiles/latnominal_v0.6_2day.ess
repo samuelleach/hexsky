@@ -1,0 +1,44 @@
+schedule_ref_year  = 2012
+schedule_ref_month = 12
+schedule_ref_day   = 1
+
+missionfile      = ldb_mission_orbit.par
+outputdir        = output_latnominal_orbit
+
+schedulefile_out = latnominal.sch
+
+first_day        = 16
+nday             = 2
+
+ncal               = 1
+fcal1              = 0.08
+calname1           = rcw38
+cal_throw_deg1     = 10. 
+cal_scanspeed_deg1 = 0.8
+
+# orbitspeed is in orbits per day e.g. orbitspeed = 0.1
+# gives 360 degrees orbit in longitude in 10 days
+expected_orbitspeed = -0.0714
+
+npatch       = 1
+cmb_ra_hr1   = 5.0
+cmb_dec_deg1 = -44.5
+
+
+
+
+adjust_scanspeed_for_elevation = 1
+
+cmb_scanspeed_deg1          = 0.4
+
+nscan_per_day_per_patch     = 20
+cmb_chopperiod_sec1         = 83.
+cmb_elevation_step_arcmin1  = 9.0
+
+adjust_dec_for_mosaic        = 1
+decmosaic_nlayer             = 4
+decmosaic_nbrick             = 5
+decmosaic_centraldec_deg     = -44.5
+#decmosaic_decrange_total_deg = 13.
+# Increase by 20 %
+decmosaic_decrange_total_deg = 15.6

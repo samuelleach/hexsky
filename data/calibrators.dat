@@ -1,0 +1,12 @@
+Name               RA(hhmmss)  DEC(ddmmss) Flux (Jy/beam)
+JUPITER              : -1  0  0      0  0  0    0
+SATURN               : -1  0  0      0  0  0    0
+MARS                 : -1  0  0      0  0  0    0
+Cen A (QUAD)         :  13 25 28    -43 01 09   0
+RCW38 (Boom)         :  08 59 19    -47 30 22   0
+IRAS08576 (Boom)     :  08 59 25    -43 45 45   0
+IRAS1022 (Boom)      :  08 59 25    -43 45 45   0
+TAU A                :  05 35 00     22 01 00   0
+(PKS)0537-441 (Boom) :  05 38 50    -44 05 08   0
+NONE                 : -3  0  0      0  0  0    0
+END

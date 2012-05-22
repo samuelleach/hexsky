@@ -1,0 +1,33 @@
+# ------------------
+# Observation fields
+# ------------------
+# RA_min [deg] RA_max [deg] Dec_min [deg] Dec_max [deg] type # Field name or file for outline.
+# type = 1 : Annulus.
+# type = 2 : Circlular field with diameter = abs(dec_max-dec_min)
+#		   and centre given by dec= (dec_max+dec_min)/2, RA= (RA_max+RA_min)/2
+# type = 3 : Read outline from file name given after # symbol.
+# Read this file with, eg, : IDL> asc_read,'fields.dat',ra_min,ra_max,dec_min,dec_max,outcomment=fieldname
+#
+      74.0000      110.000     -51.5000     -37.5000   1  # EBEX LDB (early)
+      50.0000      86.0000     -51.5000     -37.5000   1  # EBEX LDB (late))
+      53.7650      81.2350     -53.0000     -33.0000   2  # CLOVER 1
+      339.398      365.602     -50.0000     -30.0000   2  # CLOVER 2
+      214.998      235.002     -11.0000      9.00000   2  # CLOVER 3
+      125.000      145.000     -10.0000      10.0000   2  # CLOVER 4
+      76.0000      90.0000     -41.0000     -50.0000   1  # Boomerang deep
+      62.0000      102.000     -32.0000     -58.0000   1  # Boomerange shallow
+      74.0000      91.0000     -43.0000     -51.0000   1  # QUAD
+      0.00000      0.00000      0.00000      0.00000   3  # QUAD_faintarm.dat
+      0.00000      0.00000      0.00000      0.00000   3  # QUAD_brightarm.dat
+     -45.0000      45.0000     -48.0000     -67.0000   1  # BICEP CMB
+      130.000      250.000     -45.0000     -70.0000   1  # BICEP Galactic survey
+      221.177      224.177      72.6617      75.6617   1  # Beta UMi (MAXIPOL)
+      36.4529      39.4529      87.7642      89.9642   1  # Polaris (MAXIPOL dust region)
+      176.958      179.958      52.1947      55.1947   1  # Gamma UMi (MAXIPOL)
+      188.957      191.957     -2.94944      0.05056   1  # Gamma Virgo (MAXIPOL)
+      212.415      215.415      17.6822      20.6822   1  # Arcturus (MAXIPOL)
+      222.500      242.500      52.0000      64.0000   1  # MAXIMA-1
+      258.000      261.000      57.0000      62.0000   1  # High velocity cloud (cold dust) from MAMD 2005
+      150.000      166.000      70.5000      75.5000   1  # NRAO 'spider' region
+      261.000      277.000      60.3000      70.3000   1  # GBT - NEP 
+      46.2708      51.2708     -22.0839     -17.0839   1  # WMAP cold spot

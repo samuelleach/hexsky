@@ -1,0 +1,45 @@
+# Date
+year = 2012
+month = 12
+day = 17
+launch_utc = 0.
+
+# Start location: Williams field
+latitude_deg = -77.867
+longitude_start_deg = 166.967
+
+# orbitspeed is in orbits per day e.g. orbitspeed = 0.1
+# gives 360 degrees orbit in longitude in 10 days
+orbitspeed = 0.0
+
+# Scanning constraints
+elevation_calibrator_lowerlimit_deg = 20.
+elevation_lowerlimit_deg = 30.
+elevation_upperlimit_deg = 60.
+elevation_lowerthreshold_deg = 45.
+elevation_upperthreshold_deg = 45.
+antisun_constraint_deg  = 43.
+antimoon_constraint_deg = 135.
+
+# Temperature at which the solar modules are running
+# (higher temperature mean less power consumption. A. Smith, Columbia)
+solar_module_temp_celsius = 110.
+
+# Gondola chopping turnaround parameters
+maxaccel_deg = 1.8
+starcamstop_sec = 1.
+trepointing_sec = 1.
+
+# Noise and instrument parameters
+tsamp_sec =   0.22
+taubolo_sec = 0.009
+fknee_hz = 0.5
+alpha = 2.
+NET_1 = 193.33 
+NET_2 = 398.67 
+NET_3 = 3077.30 
+NET = 193.33
+FWHM = 8.
+fhwp_hz = 1.8
+tsamp_fast_sec = 0.005243
+minimap_size_arcmin = 8.

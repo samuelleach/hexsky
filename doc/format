@@ -1,0 +1,18 @@
+# This is a dirfile format file.
+# It was written using version 0.6.3 of the GetData Library.
+# Written on Wed Dec 22 15:59:32 2010 UTC by leach.
+/VERSION 7
+/ENDIAN little
+/PROTECT none
+/ENCODING none
+AZ RAW FLOAT32 1
+BETA RAW FLOAT64 1
+DEC RAW FLOAT64 1
+EL RAW FLOAT32 1
+LAT RAW FLOAT32 1
+LON RAW FLOAT32 1
+LST RAW FLOAT32 1
+RA RAW FLOAT64 1
+RJD RAW FLOAT64 1
+ROLL RAW FLOAT32 1
+/REFERENCE RA

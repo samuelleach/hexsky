@@ -1,0 +1,45 @@
+# Date
+year = 2009
+month = 5
+day = 15
+launch_utc = 14.
+
+# Start location
+latitude_deg = 89.
+longitude_start_deg = 0.
+
+# orbitspeed is in orbits per day e.g. orbitspeed = 0.1
+# gives 360 degrees orbit in longitude in 10 days
+orbitspeed = 0.00
+
+# Scanning constraints
+elevation_lowerlimit_deg = 20.
+elevation_upperlimit_deg = 60.
+antisun_radius_deg = 45.
+
+# Temperature at which the solar modules are running
+# (higher temperature mean less power consumption. A. Smith, Columbia)
+solar_module_temp_celsius = 110.
+
+# Gondola chopping turnaround parameters
+maxaccel_deg = 1.8
+starcamstop_sec = 1.
+trepointing_sec = 7.
+
+# Noise and instrument parameters
+tsamp_sec =   0.075
+taubolo_sec = 0.009
+fknee_hz = 0.5
+alpha = 2.
+NET_1 = 193.33 
+NET_2 = 398.67 
+NET_3 = 3077.30 
+NET = 193.33
+FWHM = 8.
+fhwp_hz = 2.
+tsamp_fast_sec = 0.005243
+
+
+#NET_150 = 145×2 / 1.5 = 193.33 uK √Hz
+#NET_250 = 299×2 / 1.5 = 398.67 uK √Hz
+#NET_410 = 2308×2 / 1.5 = 3077.30 uK √Hz

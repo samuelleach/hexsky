@@ -1,0 +1,220 @@
+#########################
+# INPUT/OUTPUT PARAMETERS
+#########################
+
+# output_dir determines the location of the outputted binary files.
+ output_dir = /home/leach/tmp/
+
+# outfileroot determines the location and prefix of certain outputted ascii files.
+ outfileroot = /home/leach/tmp/ebex_scan
+
+# Outputted binary files will contain 2^file_size pointing samples.
+ file_size = 15
+
+# Outputted dirfile data will appended to existing dirfile if append_data_to_dirfile=1
+ append_data_to_dirfile=0
+
+#########################
+# GONDOLA CHOP PARAMETERS
+#########################
+
+# if wantcmbdipolescan = 1 then we execute a constant elevation scan for totalt at maxspeed_deg
+# starting from dipolescan_startel
+ wantcmbdipolescan = 0 
+ cmbdipolescan_startel = 30.
+
+# Set wantcoselmodulatedscanspeed = 1 for a gondola azimuthal scan speed equal to
+# maxspeed_deg/cos(el)
+ wantcoselmodulatedscanspeed = 0 	
+
+# stopt is the stop time [s] for which the gondola is at rest
+# during the turnaround.
+ stopt=2
+
+# totalt is the period [s] of one complete chop.
+ totalt= 51.4	
+
+# timebetweensamples [s] determines the overall run time of the code and size
+# of the output files. Should be 1/(190.5Hz) = 0.00524934 s.
+ timebetweensamples= 0.00524934
+
+# maxspeed_deg is the maximum azimuthal scan speed in deg/s of the gondola
+# rotation. NB The on-sky scan speed is reduced by a factor
+# ~cos(el), where  30 < el [deg] < 60 for the LDB.
+ maxspeed_deg= 0.92
+
+# maxaccel_rad is the maximum acceleration of the gondola [rad/s/s] (which determines
+# the turn around time). So far, this has been measured by Columbia gang
+# to be ~ 1 deg/s/s.
+ maxaccel_rad= 0.017
+
+# dofirstdaydeeper doubles numberchop and halves totalt for the first day.
+# This is a potential contingency plan for the LDB.
+ dofirstdaydeeper = 0
+
+########################
+# SCAN REPEAT PARAMETERS
+########################
+
+
+# NB These parameters must be chosen so that:
+#      totalt x numberchop x numberelestep x numberscan < 24 hours.
+
+
+# Set wantcalibratorscan = 1 for an elevation step every half chop.
+# In this case the numberchop parameter is ignored.
+ wantcalibratorscan = 0 
+
+# numberchop is the number of chops at a given elevation setting.
+ numberchop= 4
+
+
+# numberelestep is the number of elevation steps in a given scan.
+ numberelestep=52 
+
+# number scan is the number of scans per day.
+ numberscan = 8
+
+# totaldays is the number of days of the flight. This determines the overall
+# repeating of the daily scanning strategy.
+ totaldays= 14
+
+##############################
+# Declination range parameters
+##############################
+
+# The code uses a trial and error scheme to choose the elevation step
+# needed to acheive the required targetdecrange (using numberelestep
+# elevation steps)
+ targetdecrange= 5. 
+ elestepmin_arcmin= -4.
+ elestepmax_arcmin= 4. 
+ noofelestepstotry= 9 
+
+########################################
+# LOCATION OF CENTRE OF SCAN AREA ON SKY
+########################################
+
+# Central declination of observations [deg]. This is determined by the EBEX
+# elevation constraint 30 < el [deg] < 60, as observed from latitude_deg = -77.8  
+ startdec_center= -44.5
+
+# RA [deg] at the start of each calendar day of scanning.
+# In order to satisfy the anti-sun constraints, the RA of the scan area should
+# be roughly  68 + ndays, where ndays is the number of days after 15 December.
+ startra_day_0= 0
+ startra_day_1= 0
+ startra_day_2= 0
+ startra_day_3= 0
+ startra_day_4= 0
+ startra_day_5= 0
+ startra_day_6= 0
+ startra_day_7= 0
+ startra_day_8= 0
+ startra_day_9= 0
+ startra_day_10=0
+ startra_day_11=0
+ startra_day_12=0
+ startra_day_13=0
+ startra_day_14=0
+ startra_day_15 = 67
+ startra_day_16 = 68
+ startra_day_17 = 69
+ startra_day_18 = 70
+ startra_day_19 = 71
+ startra_day_20 = 72
+ startra_day_21 = 73
+ startra_day_22 = 74
+ startra_day_23 = 75
+ startra_day_24 = 76
+ startra_day_25 = 77
+ startra_day_26 = 78
+ startra_day_27 = 79
+ startra_day_28 = 80
+ startra_day_29 = 81
+ startra_day_30 = 82
+ startra_day_31 = 83
+ startra_day_32 = 84
+ startra_day_33 = 85
+ startra_day_34 = 86
+ startra_day_35 = 87
+ startra_day_36 = 88
+ startra_day_37 = 89
+ startra_day_38 = 90
+ startra_day_39 = 91
+ startra_day_40 = 92
+ startra_day_41 = 93
+ startra_day_42 = 94
+ startra_day_43 = 95
+ startra_day_44 = 96
+ startra_day_45 = 97
+ startra_day_46 = 98
+ startra_day_47 = 99
+
+
+######################
+# SCANNING CONSTRAINTS
+######################
+# The code will stop if the elevation goes above elevationlimit.
+ elevationlimit= 60
+
+######################
+# SCAN DATE PARAMETERS
+######################
+ # NB starthour is in GMT.
+
+ year= 2009
+ month= 12
+ startday = 32
+ starthour = 0
+ startscan = 1
+
+##########################
+# GEOGRAPHCICAL PARAMETERS
+##########################
+
+# Latitude [deg] of observations.
+ latitude_deg= -77.836
+
+# Starting longitude [deg east] of observations.
+ longitude_start_deg= 166.66
+
+# Orbit speed [360deg/s east].
+# i.e. orbitspeed=0.1 corresponds to one complete orbit around the
+# south pole at constant latitude every 10 days.
+ orbitspeed= -0.1
+
+######################
+# GONDOLA PENDULATIONS
+######################
+# Gondola pendulation parameters are set in the ebex_gondola.c code.
+ wantazipendulation = 1
+ wantelependulation = 1
+ wantrollpendulation = 0
+
+####################
+# GNUPLOT PARAMETERS
+####################
+# wantplots = 1 will produce files for plotting with gnuplot.
+# displayplot = 1 will display the plots with gnuplot.
+ wantplots=1
+ displayplots=0
+
+
+############################
+# PLOT PARAMETERS (IGNORE)
+############################
+ ramin= 63. 
+ ramax= 107. 
+ decmin=  -58.
+ decmax=  -32.
+ cellsize_arcmin= 8
+
+##################
+# VARIOUS (IGNORE)
+##################
+ fpc_only = 0
+ wantreconstructionerrors=0
+ starcamera_noise=4
+ gyro_noise=0.067
+ noofdetectors= 1

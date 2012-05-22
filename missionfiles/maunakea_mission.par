@@ -1,0 +1,47 @@
+# Date
+year = 2010
+month = 6
+day = 11
+launch_utc = 1.
+
+# Start location
+latitude_deg = 19.8
+longitude_start_deg = -155.9
+
+# orbitspeed is in orbits per day e.g. orbitspeed = 0.1
+# gives 360 degrees orbit in longitude in 10 days
+orbitspeed = 0.0
+
+# Scanning constraints
+#From http://sma1.sma.hawaii.edu/beamcalc.html
+#Elevation limit of 10 degrees assumed if necessary.
+#For subcompact configuration, the array elements are physically limited to elevations > 31.3 degrees.
+elevation_calibrator_lowerlimit_deg = 31.3.
+elevation_lowerlimit_deg = 31.3.
+elevation_upperlimit_deg = 90.
+antisun_constraint_deg = 135.
+antimoon_constraint_deg = 135.
+
+# Temperature at which the solar modules are running
+# (higher temperature mean less power consumption. A. Smith, Columbia)
+solar_module_temp_celsius = 110.
+
+# Gondola chopping turnaround parameters
+maxaccel_deg = 1.8
+starcamstop_sec = 1.
+trepointing_sec = 7.
+
+# Noise and instrument parameters
+tsamp_sec =   0.05
+#tsamp_sec =   0.005243
+taubolo_sec = 0.009
+fknee_hz = 0.5
+alpha = 2.
+NET_1 = 193.33 
+NET_2 = 398.67 
+NET_3 = 3077.30 
+NET = 193.33
+FWHM = 8.
+fhwp_hz = 2.
+tsamp_fast_sec = 0.005243
+minimap_size_arcmin = 8.

@@ -1,0 +1,7 @@
+year = 2009 
+hour = 16. #test
+mapfile(1) = data.dat # test comment
+params1 = 1 2 3 4
+params2 = 1. 2. 3. 4.
+
+datafile = file1.dat file2.dat

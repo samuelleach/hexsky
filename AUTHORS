@@ -1,0 +1,8 @@
+S. Leach (leach@sissa.it) - Overall development of library.
+W. Grainger (Cardiff, UK) - Original hexsky C code.
+C. Bao (U. Minnesota)     - easypoint graphical user interface.
+R. Stompor  (APC, Paris)  - hexsky pointing reconstruction noise module.
+N. Ponthieu (IAS, Paris)  - Assorted codes for visualisation,
+                            polarimetry and bolometer time constant
+			    convolution.
+A. Smith (Columbia, NY)   - EBEX battery lifetime calculations.

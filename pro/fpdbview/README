@@ -1,0 +1,7 @@
+In IDL, just run:
+
+focalplane_display,'focalplane_db_PSIELL.fits'
+
+Output to:
+
+focalplane_db_PSIELL.ps

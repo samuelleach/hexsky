@@ -1,0 +1,10 @@
+FUNCTION PSM_CAREFULNESS
+
+  COMMON psm, param
+  IF DEFINED(param) THEN BEGIN
+     RETURN, param.run.carefulness 
+  ENDIF ELSE BEGIN
+     RETURN, GET_CAREFULNESS()
+  ENDELSE
+
+END

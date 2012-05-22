@@ -1,0 +1,1 @@
+ plot [-14.761328:14.638672] [-38.200000:-60.000000]\"output/test2_mean_dtheta_point_arcsec_channel21.dat\" u 1:2:3*(1.):4*(1.) w vec " | gnuplot -persist

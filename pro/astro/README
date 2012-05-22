@@ -1,0 +1,13 @@
+S. Leach (SISSA)
+
+See test_get_planet_temperature.pro for a test driver.
+
+Returned peak temperature assumes solid angle for a
+symmetric gaussian beam when aligned with planet.
+
+Brightness temperature of Jupiter and Saturn based on Moreno'98
+model.
+
+Possible improvements:
+- Solid angle for elliptical planets.
+- Implement Lagrange point 2 (1.01 AU from Sun).

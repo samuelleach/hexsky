@@ -1,0 +1,1 @@
+COMMON proj_common,mat,rota,proj,coord, $naxis1,naxis2,crpix1,crpix2,cdelt1,cdelt2,crval1,crval2,projtype,equinox, $ctype1,ctype2,projp1,longpole,cubetype

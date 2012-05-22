@@ -1,0 +1,90 @@
+-----------------------------------------
+Installing and running the hexsky package
+-----------------------------------------
+S. Leach (leach@sissa.it)
+
+1) Required packages:
+
+ - GetData version 0.7.3 or greater- the dirfile library available from:
+   http://getdata.sourceforge.net/
+   or download the source code directly from:
+   http://people.sissa.it/~leach/libs/getdata-0.7.3.tar.bz2
+
+   This is used to write pointing from the hexsky C code.
+
+ - IDL is required for the overall parsing, simulation and documentation,
+   of schedule files.
+
+ - The IDL codes will make use of Latex, ImageMagick 'convert', Python (numpy),
+   and dvipdf.
+
+2) Environment flags:
+
+  Put these modified environment flags in your ~/.bashrc file:
+
+ export HEXSKY=/path/to/hexsky
+ export ARCH=machinename
+
+  and then run 'source ~/.bashrc' to update settings.
+
+  The HEXSKY environment flag is needed by IDL to locate procedures,
+  data and the hexsky binary.
+  
+  The ARCH environment (architecture name: choose something like
+  "mylaptopname") is used in hexsky/src/Makefile for determining the
+  compile and link flags for the hexsky binary.
+
+3) IDL startup file:
+  
+  Put the following lines in your IDL startup file (eg. in
+  Healpix_2.1X/src/idl/HEALPix_startup)
+
+ hexskyroot = getenv('HEXSKY')
+ DEFSYSV, '!path_sep', ':'
+ !path      = expand_path('+'+hexskyroot)+!path_sep+!path
+ hexskylib     
+
+ This adds the hexsky/pro IDL procedures to the IDL path and
+ initialises the library by running hexskylib.pro.
+
+4) Compilation of hexsky binary:
+
+ Once the ARCH environment flag has been set, go to hexsky/src, modify
+ the Makefile and compile the C scanning code (bin/hexsky):
+ 
+ make hexsky
+
+ This will prodice the binary file hexsky/bin/hexsky
+
+5) Download Healpix map templates and other data:
+
+  cd data/
+  bash getdata.sh
+
+6) Running the test driver (pro/hexsky/hexsky_test_driver.pro):
+
+ Start HIDL (Healpix IDL)
+
+ HIDL> hexsky_example
+
+ The above example simulates a pre-defined schedule file.
+
+ HIDL> strategy_example
+
+ The above example generates some schedule files and then simulates them.
+
+
+ This will produce a number of outputs in the directory called
+ output_hexsky/ not limited to the following:
+
+ - Documentation: scanning_doc*.pdf
+ - Pointing dirfile: dirfile/. The entries RA, DEC and BETA
+   give the boresight pointing and orientation.
+ - hexsky parameter files: hexsky*.par at slow and full sample rates
+   (set in the mission file), for convenience. These parameter files
+   can be used to reproduce the pointing dirfile without using IDL.
+ - ps/ directory containg postscript images used in the documentation.
+ - Integration time Healpix map: tint*fits.
+ - Sky visibility Healpix map: Show what part of the sky is available,
+   and for how long (in hours per day) during the 24 hour period at
+   the start of the schedule.

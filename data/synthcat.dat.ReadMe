@@ -1,0 +1,847 @@
+J/A+A/397/213       Galactic HII regions                     (Paladini+, 2003)
+================================================================================
+A radio catalog of Galactic HII regions for applications from decimeter
+to millimeter wavelengths.
+    Paladini R., Burigana C., Davies R. D., Maino D., Bersanelli M.,
+    Cappellini B., Platania P., Smoot G.
+   <Astron. Astrophys. 397, 213 (2003)>
+   =2003A&A...397..213P
+================================================================================
+ADC_Keywords: H II regions ; Radio lines
+Keywords: HII Regions - catalogs - cosmic microwave background
+
+Description:
+    The Master Catalog collects the information from 24 previously
+    published lists and catalogs for 1442 Galactic HII regions. For each
+    object, the Master Catalog quotes the original fluxes and diameters as
+    well as the available information on radio line velocities, line
+    widths and line temperatures and the errors on these quantities. The
+    Synthetic Catalog at 2.7GHz summarizes the basic information of flux
+    density and angular diameter for each of these objects. The catalog
+    can be used for detailed studies of Galactic HII regions and, by
+    extrapolation, for investigations of HII regions up to millimetric
+    wavelengths.
+
+File Summary:
+--------------------------------------------------------------------------------
+ FileName    Lrecl   Records     Explanations
+--------------------------------------------------------------------------------
+ReadMe          80         .     This file
+synthcat.dat   121      1442     Synthetic Catalog at 2.7GHz
+subcat1.dat     82      1442     Master catalog, Coordinates and notes
+subcat2.dat    378      1442     Master catalog, Flux densities
+subcat3.dat    128      1442     Master catalog, Errors on flux densities
+subcat4.dat    294      1442     Master catalog, Angular diameters
+subcat5.dat    128      1442     Master catalog, Errors on angular diameters
+subcat6.dat    378      1442     Master catalog, Line velocities
+subcat7.dat    322      1442     Master catalog, Errors on line velocities
+subcat8.dat    322      1442     Master catalog, Line widths
+subcat9.dat    322      1442     Master catalog, Errors on line widths
+subcat10.dat   322      1442     Master catalog, Line temperatures
+subcat11.dat   378      1442     Master catalog, Errors on line temperatures
+--------------------------------------------------------------------------------
+
+Byte-by-byte Description of file: synthcat.dat
+--------------------------------------------------------------------------------
+   Bytes Format Units     Label      Explanations
+--------------------------------------------------------------------------------
+   1-  4  I4    ---       HII        [1/1442]+ Galactic HII region number
+   6- 16  A11   ---       Gname      Name based on galactic position
+  18- 19  I2    h         RAh        Right ascension (J2000.0)
+  21- 22  I2    min       RAm        Right ascension (J2000.0)
+  24- 27  F4.1  s         RAs        [0/60] Right ascension (J2000.0)
+      30  A1    ---       DE-        Declination sign (J2000.0)
+  31- 32  I2    deg       DEd        Declination (J2000.0)
+  34- 35  I2    arcmin    DEm        Declination (J2000.0)
+  37- 38  I2    arcsec    DEs        [0/60] Declination (J2000.0)
+      42  A1    ---     l_S2.7GHz    Limit flag on S2.7GHz
+  43- 47  F5.1  Jy        S2.7GHz    Flux density at 2.7GHz
+      49  A1    ---   l_e_S2.7GHz    Limit flag on e_S2.7GHz
+  50- 54  F5.1  Jy      e_S2.7GHz    Flux density error (1)
+      59  A1    ---     l_theta      Limit flag on theta
+  60- 63  F4.1  arcmin    theta      Angular diameter
+  67- 68  A2    ---     n_theta      [** ] Note on theta (2)
+  69- 73  F5.1  arcmin  e_theta      ? Angular diameter error
+  77- 82  F6.1  km/s      VLSR       ? Recombination line velocity
+  86- 89  F4.1  km/s    e_VLSR       ? Recombination line velocity error
+  91-118  A28    ---      Remarks    Remarks and radio, optical counterparts
+--------------------------------------------------------------------------------
+Note (1): When "<" is present, it is an upper limit.
+Note (2): Angular diameters marked with ** are indicative diameters
+     derived from the flux vs. size correlation (see Fig. 2 of the paper)
+--------------------------------------------------------------------------------
+
+Byte-by-byte Description of file: subcat1.dat
+-----------------------------------------------------------------------------
+   Bytes Format Units     Label     Explanations
+-----------------------------------------------------------------------------
+   1-  4  I4    ---       HII       Galactic HII region number
+   6- 16  A11   ---       Gname     Name based on galactic position
+  18- 19  I2     h        RAh       Right Ascension J2000 (hours)
+  21- 22  I2     min      RAm       Right Ascension J2000 (minutes)
+  24- 27  F4.1   s        RAs       [0/60] Right Ascension J2000 (seconds)
+      31  A1     ---      DE-       Declination sign (J2000.0)
+  32- 33  I2     deg      DEd       Declination J2000 (degrees)
+  35- 36  I2     arcmin   DEm       Declination J2000 (minutes)
+  38- 41  F4.1   arcsec   DEs       [0/60] Declination J2000 (seconds)
+  46- 82  A37     ---     Rem       Remarks and radio, optical counterparts (1)
+--------------------------------------------------------------------------------
+Note (1): Radio identifications:
+     Ke refers to Kesteven, 1968AuJPh..21..369K, Kes NN in Simbad
+   NRAO to Pauliny-Toth, 1966, Cat. <J/ApJS/13/65>
+      W to Westerhout, 1958, Cat. <VIII/64>
+     3C to Third Cambridge Catalog (Bennett, 1962, Cat. <VIII/1>),
+     4C to Fourth Cambridge Catalog (Gower et al., 1967MmRAS..71...49G and
+   Pilkington et al. 1965MmRAS..69..183P, Cat. <VIII/4>)
+
+   Optical identifications (from The Marsalkova Catalog, 1974Ap&SS..27....3M):
+     BBW refers to Bok-Bester-Wade, 1955HarRe.416....1B
+     DWB to Dickel-Wendker-Bieritz, 1969A&A.....1..270D
+  Ge (a) to Georgelin-Georgelin, 1970A&A.....6..349G
+  Ge (b) to Georgelin-Georgelin, 1970A&A.....7..133G
+  Ge (c) to Georgelin-Georgelin, 1970A&AS....3....1G
+       G to Gum, 1955MmRAS..67..155G, Gum NNa in Simbad
+       H to Hoffleit, 1953AnHar.119...37H, [H53] NN in Simbad
+     RCW to Rodgers-Campbell-Whiteoaki, 1960, Cat. <VII/216>
+       S to Sharpless, 1959, Cat. <VII/20>, Sh 2-NNN in Simbad
+       M stands for Messier Catalog
+     NGC for Dreyers' New General Catalog (See Cat. <VII/118>) and
+      IC for the Index Catalog (See Cat. <VII/118>)
+--------------------------------------------------------------------------------
+
+Byte-by-byte Description of file: subcat2.dat
+-----------------------------------------------------------------------------
+   Bytes Format Units     Label     Explanations
+-----------------------------------------------------------------------------
+   1-  4  I4    ---       HII       Galactic HII region number
+   6- 16  A11   ---       Gname     Name based on galactic position
+  18- 19  I2    h         RAh       Right ascension (J2000.0)
+  21- 22  I2    min       RAm       Right ascension (J2000.0)
+  24- 27  F4.1  s         RAs       [0/60] Right ascension (J2000.0)
+      31  A1    ---       DE-       Declination sign (J2000.0)
+  32- 33  I2    deg       DEd       Declination (J2000.0)
+  36- 37  I2    arcmin    DEm       Declination (J2000.0)
+  39- 42  F4.1  arcsec    DEs       [0/60] Declination (J2000.0)
+  46- 54  F9.3  Jy        S1.4GHz1  Flux density at 1.4GHz
+                                     Altenhoff et al., 1970A&AS....1..319A
+  58- 66  F9.3  Jy        S1.4GHz2  Flux density at 1.4GHz
+                                     Felli & Churchwell, 1972A&AS....5..369F
+  70- 78  F9.3  Jy        S2.7GHz1  Flux density at 2.7GHz
+                                     Altenhoff et al., 1970A&AS....1..319A
+  82- 90  F9.3  Jy        S2.7GHz2  Flux density at 2.7GHz
+                                     Beard, 1966AuJPh..19..141B
+  94-102  F9.3  Jy        S2.7GHz3  Flux density at 2.7GHz
+                                     Beard & Kerr, 1969AuJPh..22..121B
+ 106-114  F9.3  Jy        S2.7GHz4  Flux density at 2.7GHz
+                                     Beard et al., 1969AuJPA..11...27B
+ 118-126  F9.3  Jy        S2.7GHz5  Flux density at 2.7GHz
+                                     Day et al., 1969AuJPA..11...11D
+ 130-138  F9.3  Jy        S2.7GHz6  Flux density at 2.7GHz
+                                     Day et al., 1970AuJPA..13...11D
+ 142-150  F9.3  Jy        S2.7GHz7  Flux density at 2.7GHz
+                                     Furst et al., 1987A&AS...69..403F
+ 154-162  F9.3  Jy        S2.7GHz8  Flux density at 2.7GHz
+                                     Goss & Day, 1970AuJPA..13....3G
+ 166-174  F9.3  Jy        S2.7GHz9  Flux density at 2.7GHz
+                                     Reich et al., 1986A&A...155..185R
+ 178-186  F9.3  Jy        S2.7GHz10 Flux density at 2.7GHz
+                                     Thomas & Day, 1969AuJPA..11....3T
+ 190-198  F9.3  Jy        S2.7GHz11 Flux density at 2.7GHz
+                                     Thomas & Day, 1969AuJPA..11...19T
+ 202-210  F9.3  Jy        S2.7GHz12 Flux density at 2.7GHz
+                                     Wendker, 1970A&A.....4..378W
+ 214-222  F9.3  Jy        S3.9GHz   Flux density at 3.9GHz
+                                     Berlin et al., 1985AZh....62..229B
+ 226-234  F9.3  Jy        S4.8GHz1  Flux density at 4.8GHz, 1st part of
+                                     Kuchar & Clark, 1997ApJ...488..224K
+ 238-246  F9.3  Jy        S4.8GHz2  Flux density at 4.8GHz, 2nd part of
+                                     Kuchar & Clark, 1997ApJ...488..224K
+ 250-258  F9.3  Jy        S5GHz1    Flux density at 5GHz
+                                     Altenhoff et al., 1970A&AS....1..319A
+ 262-270  F9.3  Jy        S5GHz2    Flux density at 5GHz
+                                     Altenhoff et al., 1979A&AS...35...23A
+ 274-282  F9.3  Jy        S5GHz3    Flux density at 5GHz
+                                     Caswell & Haynes, 1987A&A...171..261C
+ 286-294  F9.3  Jy        S5GHz4    Flux density at 5GHz
+                                     Downes et al., 1980A&AS...40..379D
+ 298-306  F9.3  Jy        S5GHz5    Flux density at 5GHz
+                                     Mezger & Henderson, 1967ApJ...147..471M
+ 310-318  F9.3  Jy        S5GHz6    Flux density at 5GHz
+                                     Reifenstein et al., 1970A&A.....4..357R
+ 322-330  F9.3  Jy        S5GHz7    Flux density at 5GHz
+                                     Wilson et al., 1970A&A.....6..364W
+ 334-342  F9.3  Jy        S5GHz8    Flux density at 5GHz
+                                     Wink et al., 1982A&A...108..227W
+ 346-354  F9.3  Jy        S14.7GHz  Flux density at 14.7GHz
+                                     Wink et al., 1983A&A...127..211W
+ 358-366  F9.3  Jy        S15GHz    Flux density at 15GHz
+                                     Wink et al., 1982A&A...108..227W
+ 370-378  F9.3  Jy        S86GHz    Flux density at 86GHz
+                                     Wink et al., 1982A&A...108..227W
+--------------------------------------------------------------------------------
+
+Byte-by-byte Description of file: subcat3.dat
+-----------------------------------------------------------------------------
+   Bytes Format Units    Label       Explanations
+-----------------------------------------------------------------------------
+   1-  4  I4    ---       HII       Galactic HII region number
+   6- 16  A11   ---       Gname     Name based on galactic position
+  18- 19  I2    h         RAh       Right ascension (J2000.0)
+  21- 22  I2    min       RAm       Right ascension (J2000.0)
+  24- 27  F4.1  s         RAs       [0/60] Right ascension (J2000.0)
+      31  A1    ---       DE-       Declination sign (J2000.0)
+  32- 33  I2    deg       DEd       Declination (J2000.0)
+  36- 37  I2    arcmin    DEm       Declination (J2000.0)
+  39- 42  F4.1  arcsec    DEs       [0/60] Declination (J2000.0)
+  46- 47  I2    %       e_S1.4GHz1  Error on flux density at 1.4GHz
+                                     Altenhoff et al., 1970A&AS....1..319A
+  49- 50  I2    %       e_S1.4GH2   Error on flux density at 1.4GHz
+                                     Felli & Churchwell, 1972A&AS....5..369F
+  52- 53  I2    %       e_S2.7GHz1  Error on flux density at 2.7GHz
+                                     Altenhoff et al., 1970A&AS....1..319A
+  55- 56  I2    %       e_S2.7GHz2  Error on flux density at 2.7GHz
+                                     Beard, 1966AuJPh..19..141B
+  58- 59  I2    %       e_S2.7GHz3  Error on flux density at 2.7GHz
+                                     Beard & Kerr, 1969AuJPh..22..121B
+  61- 62  I2    %       e_S2.7GHz4  Error on flux density at 2.7GHz
+                                     Beard et al., 1969AuJPA..11...27B
+  64- 65  I2    %       e_S2.7GHz5  Error on flux density at 2.7GHz
+                                     Day et al., 1969AuJPA..11...11D
+  67- 68  I2    %       e_S2.7GHz6  Error on flux density at 2.7GHz
+                                     Day et al., 1970AuJPA..13...11D
+  70- 71  I2    %       e_S2.7GHz7  Error on flux density at 2.7GHz
+                                     Furst et al., 1987A&AS...69..403F
+  73- 74  I2    %       e_S2.7GHz8  Error on flux density at 2.7GHz
+                                     Goss & Day, 1970AuJPA..13....3G
+  76- 77  I2    %       e_S2.7GHz9  Error on flux density at 2.7GHz
+                                     Reich et al., 1986A&A...155..185R
+  79- 80  I2    %       e_S2.7GHz10 Error on flux density at 2.7GHz
+                                     Thomas & Day, 1969AuJPA..11....3T
+  82- 83  I2    %       e_S2.7GHz11 Error on flux density at 2.7GHz
+                                     Thomas & Day, 1969AuJPA..11...19T
+  85- 86  I2    %       e_S2.7GHz12 Error on flux density at 2.7GHz
+                                     Wendker, 1970A&A.....4..378W
+  88- 89  I2    %       e_S3.9GHz   Error on flux density at 3.9GHz
+                                     Berlin et al., 1985AZh....62..229B
+  91- 92  I2    %       e_S4.8GHz1  Error on flux density at 4.8GHz, 1st part
+                                     of Kuchar & Clark, 1997ApJ...488..224K
+  94- 95  I2    %       e_S4.8GHz2  Error on flux density at 4.8GHz, 2nd part
+                                     of Kuchar & Clark, 1997ApJ...488..224K
+  97- 98  I2    %       e_S5GHz1    Error on flux density at 5GHz
+                                     Altenhoff et al., 1970A&AS....1..319A
+ 100-101  I2    %       e_S5GHz2    Error on flux density at 5GHz
+                                     Altenhoff et al., 1979A&AS...35...23A
+ 103-104  I2    %       e_S5GHz3    Error on flux density at 5GHz
+                                     Caswell & Haynes, 1987A&A...171..261C
+ 106-107  I2    %       e_S5GHz4    Error on flux density at 5GHz
+                                     Downes et al., 1980A&AS...40..379D
+ 109-110  I2    %       e_S5GHz5    Error on flux density at 5GHz
+                                     Mezger & Henderson, 1967ApJ...147..471M
+ 112-113  I2    %       e_S5GHz6    Error on flux density at 5GHz
+                                     Reifenstein et al., 1970A&A.....4..357R
+ 115-116  I2    %       e_S5GHz7    Error on flux density at 5GHz
+                                     Wilson et al., 1970A&A.....6..364W
+ 118-119  I2    %       e_S5GHz8    Error on flux density at 5GHz
+                                     Wink et al., 1982A&A...108..227W
+ 121-122  I2    %       e_S14.7GHz  Error on flux density at 14.7GHz
+                                     Wink et al., 1983A&A...127..211W
+ 124-125  I2    %       e_S15GHz    Error on flux density at 15GHz
+                                     Wink et al., 1982A&A...108..227W
+ 127-128  I2    %       e_S86GHz    Error on flux density at 86GHz
+                                     Wink et al., 1982A&A...108..227W
+--------------------------------------------------------------------------------
+
+Byte-by-byte Description of file: subcat4.dat
+-----------------------------------------------------------------------------
+   Bytes Format Units     Label      Explanations
+-----------------------------------------------------------------------------
+   1-  4  I4    ---       HII        Galactic HII region number
+   6- 16  A11   ---       Gname      Name based on galactic position
+  18- 19  I2    h         RAh        Right ascension (J2000.0)
+  21- 22  I2    min       RAm        Right ascension (J2000.0)
+  24- 27  F4.1  s         RAs        [0/60] Right ascension (J2000.0)
+      31  A1    ---       DE-        Declination sign (J2000.0)
+  32- 33  I2    deg       DEd        Declination (J2000.0)
+  36- 37  I2    arcmin    DEm        Declination (J2000.0)
+  39- 42  F4.1  arcsec    DEs        [0/60] Declination (J2000.0)
+  46- 51  F6.2  arcmin    D1.4GHz1   Angular diameter at 1.4GHz
+                                      Altenhoff et al., 1970A&AS....1..319A
+  55- 60  F6.2  arcmin    D1.4GHz2   Angular diameter at 1.4GHz
+                                      Felli & Churchwell, 1972A&AS....5..369F
+  64- 69  F6.2  arcmin    D2.7GHz1   Angular diameter at 2.7GHz
+                                      Altenhoff et al., 1970A&AS....1..319A
+  73- 78  F6.2  arcmin    D2.7GHz2   Angular diameter at 2.7GHz
+                                      Beard, 1966AuJPh..19..141B
+  82- 87  F6.2  arcmin    D2.7GHz3   Angular diameter at 2.7GHz
+                                      Beard & Kerr, 1969AuJPh..22..121B
+  91- 96  F6.2  arcmin    D2.7GHz4   Angular diameter at 2.7GHz
+                                      Beard et al., 1969AuJPA..11...27B
+ 100-105  F6.2  arcmin    D2.7GHz5   Angular diameter at 2.7GHz
+                                      Day et al., 1969AuJPA..11...11D
+ 109-114  F6.2  arcmin    D2.7GHz6   Angular diameter at 2.7GHz
+                                      Day et al., 1970AuJPA..13...11D
+ 118-123  F6.2  arcmin    D2.7GHz7   Angular diameter at 2.7GHz
+                                      Furst et al., 1987A&AS...69..403F
+ 127-132  F6.2  arcmin    D2.7GHz8   Angular diameter at 2.7GHz
+                                      Goss & Day, 1970AuJPA..13....3G
+ 136-141  F6.2  arcmin    D2.7GHz9   Angular diameter at 2.7GHz
+                                      Reich et al., 1986A&A...155..185R
+ 145-150  F6.2  arcmin    D2.7GHz10  Angular diameter at 2.7GHz
+                                      Thomas & Day, 1969AuJPA..11....3T
+ 154-159  F6.2  arcmin    D2.7GHz11  Angular diameter at 2.7GHz
+                                      Thomas & Day, 1969AuJPA..11...19T
+ 163-168  F6.2  arcmin    D2.7GHz12  Angular diameter at 2.7GHz
+                                      Wendker, 1970A&A.....4..378W
+ 172-177  F6.2  arcmin    D3.9GHz    Angular diameter at 3.9GHz
+                                      Berlin et al., 1985AZh....62..229B
+ 181-186  F6.2  arcmin    D4.8GHz1   Angular diameter at 4.8GHz, 1st part of
+                                      Kuchar & Clark, 1997ApJ...488..224K
+ 190-195  F6.2  arcmin    D4.8GHz2   Angular diameter at 4.8GHz, 2nd part of
+                                      Kuchar & Clark, 1997ApJ...488..224K
+ 199-204  F6.2  arcmin    D5GHz1     Angular diameter at 5GHz
+                                      Altenhoff et al., 1970A&AS....1..319A
+ 208-213  F6.2  arcmin    D5GHz2     Angular diameter at 5GHz
+                                      Altenhoff et al., 1979A&AS...35...23A
+ 217-222  F6.2  arcmin    D5GHz3     Angular diameter at 5GHz
+                                      Caswell & Haynes, 1987A&A...171..261C
+ 226-231  F6.2  arcmin    D5GHz4     Angular diameter at 5GHz
+                                      Downes et al., 1980A&AS...40..379D
+ 235-240  F6.2  arcmin    D5GHz5     Angular diameter at 5GHz
+                                      Mezger & Henderson, 1967ApJ...147..471M
+ 244-249  F6.2  arcmin    D5GHz6     Angular diameter at 5GHz
+                                      Reifenstein et al., 1970A&A.....4..357R
+ 253-258  F6.2  arcmin    D5GHz7     Angular diameter at 5GHz
+                                      Wilson et al., 1970A&A.....6..364W
+ 262-267  F6.2  arcmin    D5GHz8     Angular diameter at 5GHz
+                                      Wink et al., 1982A&A...108..227W
+ 271-276  F6.2  arcmin    D14.7GHz   Angular diameter at 14.7GHz
+                                      Wink et al., 1983A&A...127..211W
+ 280-285  F6.2  arcmin    D15GHz     Angular diameter at 15GHz
+                                      Wink et al., 1982A&A...108..227W
+ 289-294  F6.2  arcmin    D86GHz     Angular diameter at 86GHz
+                                      Wink et al., 1982A&A...108..227W
+--------------------------------------------------------------------------------
+
+
+Byte-by-byte Description of file: subcat5.dat
+--------------------------------------------------------------------------------
+   Bytes Format Units     Label     Explanations
+--------------------------------------------------------------------------------
+   1-  4   I4    ---      HII       Galactic HII region number
+   6- 16   A11   ---      Gname     Name based on galactic position
+  18- 19   I2     h       RAh       Right ascension (J2000.0)
+  21- 22   I2     min     RAm       Right ascension (J2000.0)
+  24- 27   F4.1   s       RAs       [0/60] Right ascension (J2000.0)
+      31   A1     ---     DE-       Declination sign (J2000.0)
+  32- 33   I2     deg     DEd       Declination (J2000.0)
+  36- 37   I2     arcmin  DEm       Declination (J2000.0)
+  39- 42   F4.1   arcsec  DEs       [0/60] Declination (J2000.0)
+  46- 47   I2     %     e_D1.4GHz1  Error on angular diameter at 1.4GHz
+                                     Altenhoff et al., 1970A&AS....1..319A
+  49- 50   I2     %     e_D1.4GHz2  Error on angular diameter at 1.4GHz
+                                     Felli & Churchwell, 1972A&AS....5..369F
+  52- 53   I2     %     e_D2.7GHz1  Error on angular diameter at 2.7GHz
+                                     Altenhoff et al., 1970A&AS....1..319A
+  55- 56   I2     %     e_D2.7GHz2  Error on angular diameter at 2.7GHz
+                                     Beard, 1966AuJPh..19..141B
+  58- 59   I2     %     e_D2.7GHz3  Error on angular diameter at 2.7GHz
+                                     Beard & Kerr, 1969AuJPh..22..121B
+  61- 62   I2     %     e_D2.7GHz4  Error on angular diameter at 2.7GHz
+                                     Beard et al., 1969AuJPA..11...27B
+  64- 65   I2     %     e_D2.7GHz5  Error on angular diameter at 2.7GHz
+                                     Day et al., 1969AuJPA..11...11D
+  67- 68   I2     %     e_D2.7GHz6  Error on angular diameter at 2.7GHz
+                                     Day et al., 1970AuJPA..13...11D
+  70- 71   I2     %     e_D2.7GHz7  Error on angular diameter at 2.7GHz
+                                     Furst et al., 1987A&AS...69..403F
+  73- 74   I2     %     e_D2.7GHz8  Error on angular diameter at 2.7GHz
+                                     Goss & Day, 1970AuJPA..13....3G
+  76- 77   I2     %     e_D2.7GHz9  Error on angular diameter at 2.7GHz
+                                     Reich et al., 1986A&A...155..185R
+  79- 80   I2     %     e_D2.7GHz10 Error on angular diameter at 2.7GHz
+                                     Thomas & Day, 1969AuJPA..11....3T
+  82- 83   I2     %     e_D2.7GHz11 Error on angular diameter at 2.7 Ghz
+                                     Thomas & Day, 1969AuJPA..11...19T
+  85- 86   I2     %     e_D2.7GHz12 Error on angular diameter at 2.7GHz
+                                     Wendker, 1970A&A.....4..378W
+  88- 89   I2     %     e_D3.9GHz   Error on angular diameter at 3.9GHz
+                                     Berlin et al., 1985AZh....62..229B
+  91- 92   I2     %     e_D4.8GHz1  Error on angular diameter at 4.8GHz, 1st
+                                     part of Kuchar & Clark, 1997ApJ...488..224K
+  94- 95   I2     %     e_D4.8GHz2  Error on angular diameter at 4.8GHz, 2nd
+                                     part of Kuchar & Clark, 1997ApJ...488..224K
+  97- 98   I2     %     e_D5GHz1    Error on angular diameter at 5GHz
+                                     Altenhoff et al., 1970A&AS....1..319A
+ 100-101   I2     %     e_D5GHz2    Error on angular diameter at 5GHz
+                                     Altenhoff et al., 1979A&AS...35...23A
+ 103-104   I2     %     e_D5GHz3    Error on angular diameter at 5GHz
+                                     Caswell & Haynes, 1987A&A...171..261C
+ 106-107   I2     %     e_D5GHz4    Error on angular diameter at 5GHz
+                                     Downes et al., 1980A&AS...40..379D
+ 109-110   I2     %     e_D5GHz5    Error on angular diameter at 5GHz
+                                     Mezger & Henderson, 1967ApJ...147..471M
+ 112-113   I2     %     e_D5GHz6    Error on angular diameter at 5GHz
+                                     Reifenstein et al., 1970A&A.....4..357R
+ 115-116   I2     %     e_D5GHz7    Error on angular diameter at 5GHz
+                                     Wilson et al., 1970A&A.....6..364W
+ 118-119   I2     %     e_D5GHz8    Error on angular diameter at 5GHz
+                                     Wink et al., 1982A&A...108..227W
+ 121-122   I2     %     e_D14.7GHz  Error on angular diameter at 14.7GHz
+                                     Wink et al., 1983A&A...127..211W
+ 124-125   I2     %     e_D15GHz    Error on angular diameter at 15GHz
+                                     Wink et al., 1982A&A...108..227W
+ 127-128   I2     %     e_D86GHz    Error on angular diameter at 86GHz
+                                     Wink et al., 1982A&A...108..227W
+--------------------------------------------------------------------------------
+
+Byte-by-byte Description of file: subcat6.dat
+--------------------------------------------------------------------------------
+   Bytes Format Units     Label      Explanations
+--------------------------------------------------------------------------------
+   1-  4   I4    ---      HII        Galactic HII region number
+   6- 16   A11   ---      Gname      Name based on galactic position
+  18- 19   I2    h        RAh        Right ascension (J2000.0)
+  21- 22   I2    min      RAm        Right ascension (J2000.0)
+  24- 27   F4.1  s        RAs        [0/60] Right ascension (J2000.0)
+      31   A1    ---      DE-        Declination sign (J2000.0)
+  32- 33   I2    deg      DEd        Declination (J2000.0)
+  36- 37   I2    arcmin   DEm        Declination (J2000.0)
+  39- 42   F4.1  arcsec   DEs        [0/60] Declination (J2000.0)
+  46- 54   F9.4  km/s     LV1.4GHz1  Line velocity at 1.4GHz
+                                      Altenhoff et al., 1970A&AS....1..319A
+  58- 66   F9.4  km/s     LV1.4GHz2  Line velocity at 1.4GHz
+                                      Felli & Churchwell, 1972A&AS....5..369F
+  70- 78   F9.4  km/s     LV2.7GHz1  Line velocity at 2.7GHz
+                                      Altenhoff et al., 1970A&AS....1..319A
+  82- 90   F9.4  km/s     LV2.7GHz2  Line velocity at 2.7GHz
+                                      Beard, 1966AuJPh..19..141B
+  94-102   F9.4  km/s     LV2.7GHz3  Line velocity at 2.7GHz
+                                      Beard & Kerr, 1969AuJPh..22..121B
+ 106-114   F9.4  km/s     LV2.7GHz4  Line velocity at 2.7GHz
+                                      Beard et al., 1969AuJPA..11...27B
+ 118-126   F9.4  km/s     LV2.7GHz5  Line velocity at 2.7GHz
+                                      Day et al., 1969AuJPA..11...11D
+ 130-138   F9.4  km/s     LV2.7GHz6  Line velocity at 2.7GHz
+                                      Day et al., 1970AuJPA..13...11D
+ 142-150   F9.4  km/s     LV2.7GHz7  Line velocity at 2.7GHz
+                                      Furst et al., 1987A&AS...69..403F
+ 154-162   F9.4  km/s     LV2.7GHz8  Line velocity at 2.7GHz
+                                      Goss & Day, 1970AuJPA..13....3G
+ 166-174   F9.4  km/s     LV2.7GHz9  Line velocity at 2.7GHz
+                                      Reich et al., 1986A&A...155..185R
+ 178-186   F9.4  km/s     LV2.7GHz10 Line velocity at 2.7GHz
+                                      Thomas & Day, 1969AuJPA..11....3T
+ 190-198   F9.4  km/s     LV2.7GHz11 Line velocity at 2.7GHz
+                                      Thomas & Day, 1969AuJPA..11...19T
+ 202-210   F9.4  km/s     LV2.7GHz12 Line velocity at 2.7GHz
+                                      Wendker, 1970A&A.....4..378W
+ 214-222   F9.4  km/s     LV3.9GHz   Line velocity at 3.9GHz
+                                      Berlin et al., 1985AZh....62..229B
+ 226-234   F9.4  km/s     LV4.8GHz1  Line velocity at 4.8GHz, 1st part of
+                                      Kuchar & Clark, 1997ApJ...488..224K (3)
+ 238-246   F9.4  km/s     LV4.8GHz2  Line velocity at 4.8GHz, 2nd part of
+                                      Kuchar & Clark, 1997ApJ...488..224K (3)
+ 250-258   F9.4  km/s     LV5GHz1    Line velocity at 5GHz
+                                      Altenhoff et al., 1970A&AS....1..319A
+ 262-270   F9.4  km/s     LV5GHz2    Line velocity at 5GHz
+                                      Altenhoff et al., 1979A&AS...35...23A (3)
+ 274-282   F9.4  km/s     LV5GHz3    Line velocity at 5GHz
+                                      Caswell & Haynes, 1987A&A...171..261C (3)
+ 286-294   F9.4  km/s     LV5GHz4    Line velocity at 5GHz
+                                      Downes et al., 1980A&AS...40..379D (3)
+ 298-306   F9.4  km/s     LV5GHz5    Line velocity at 5GHz
+                                      Mezger & Henderson, 1967ApJ...147..471M
+ 310-318   F9.4  km/s     LV5GHz6    Line velocity at 5GHz
+                                     Reifenstein et al., 1970A&A.....4..357R (3)
+ 322-330   F9.4  km/s     LV5GHz7    Line velocity at 5GHz
+                                      Wilson et al., 1970A&A.....6..364W (3)
+ 334-342   F9.4  km/s     LV5GHz8    Line velocity at 5GHz
+                                      Wink et al., 1982A&A...108..227W (3)
+ 346-354   F9.4  km/s     LV14.7GHz  Line velocity at 14.7GHz
+                                      Wink et al., 1983A&A...127..211W (3)
+ 358-366   F9.4  km/s     LV15GHz    Line velocity at 15GHz
+                                      Wink et al., 1982A&A...108..227W (3)
+ 370-378   F9.4  km/s     LV86GHz    Line velocity at 86GHz
+                                      Wink et al., 1982A&A...108..227W (3)
+--------------------------------------------------------------------------------
+Note (3): 
+    Kuchar & Clark (1997ApJ...488..224K) quote continuum data at 4.85GHz
+    and line data from Reifenstein et al. (1970A&A.....4..357R) and from
+    Wilson et al. (1970A&A.....6..364W) at 5GHz (H109_{alpha}_) and from
+    Lockman (1989ApJS...71..469L) at 19GHz (H85_{alpha}, H87_{alpha}_,
+    H88_{alpha}_);
+
+    Altenhoff et al. (1979A&AS...35...23A) quotes continuum data at 5GHz
+    while line data are taken from Lockman (1979A&AS...35...23A) at 4GHz
+    (H85_{alpha}_, H87_{alpha}_, H88_{alpha}_);
+
+    Caswell & Haynes (1987A&A...171..261C), Downes et al.
+    (1980A&AS...40..379D), Mezger & Henderson (1967ApJ...147..471M),
+    Reifenstein et al. (1970A&A.....4..357R), Wilson et al.
+    (1970A&A.....6..364W) quote both continuum and line data at 5GHz
+    (H109_{alpha}_, H110_{alpha}_);
+
+    Wink et al. (1982A&A...108..227W) quotes continuum data at 5/15/86GHz
+    and line data at 8.9/14.7GHz (H90_{alpha}_, H76_{alpha}_).
+
+--------------------------------------------------------------------------------
+
+Byte-by-byte Description of file: subcat7.dat
+--------------------------------------------------------------------------------
+   Bytes Format Units    Label       Explanations
+--------------------------------------------------------------------------------
+   1-  4   I4    ---     HII         Galactic HII region number
+   6- 16   A11   ---     Gname       Name based on galactic position
+  18- 19   I2    h       RAh         Right ascension (J2000.0)
+  21- 22   I2    min     RAm         Right ascension (J2000.0)
+  24- 27   F4.1  s       RAs         [0/60] Right ascension (J2000.0)
+      31   A1    ---     DE-         Declination sign (J2000.0)
+  32- 33   I2    deg     DEd         Declination (J2000.0)
+  36- 37   I2    arcmin  DEm         Declination (J2000.0)
+  39- 42   F4.1  arcsec  DEs         [0/60] Declination (J2000.0)
+  46- 52   F7.3  km/s  e_LV1.4GHz1   Error on line velocity at 1.4GHz
+                                      Altenhoff et al., 1970A&AS....1..319A
+  56- 62   F7.3  km/s  e_LV1.4GHz2   Error on line velocity at 1.4GHz
+                                      Felli & Churchwell, 1972A&AS....5..369F
+  66- 72   F7.3  km/s  e_LV2.7GHz1   Error on line velocity at 2.7GHz
+                                      Altenhoff et al., 1970A&AS....1..319A
+  76- 82   F7.3  km/s  e_LV2.7GHz2   Error on line velocity at 2.7GHz
+                                      Beard, 1966AuJPh..19..141B
+  86- 92   F7.3  km/s  e_LV2.7GHz3   Error on line velocity at 2.7GHz
+                                      Beard & Kerr, 1969AuJPh..22..121B
+  96-102   F7.3  km/s  e_LV2.7GHz4   Error on line velocity at 2.7GHz
+                                      Beard et al., 1969AuJPA..11...27B
+ 106-112   F7.3  km/s  e_LV2.7GHz5   Error on line velocity at 2.7GHz
+                                      Day et al., 1969AuJPA..11...11D
+ 116-122   F7.3  km/s  e_LV2.7GHz6   Error on line velocity at 2.7GHz
+                                      Day et al., 1970AuJPA..13...11D
+ 126-132   F7.3  km/s  e_LV2.7GHz7   Error on line velocity at 2.7GHz
+                                      Furst et al., 1987A&AS...69..403F
+ 136-142   F7.3  km/s  e_LV2.7GHz8   Error on line velocity at 2.7GHz
+                                      Goss & Day, 1970AuJPA..13....3G
+ 146-152   F7.3  km/s  e_LV2.7GHz9   Error on line velocity at 2.7GHz
+                                      Reich et al., 1986A&A...155..185R
+ 156-162   F7.3  km/s  e_LV2.7GHz10  Error on line velocity at 2.7GHz
+                                      Thomas & Day, 1969AuJPA..11....3T
+ 166-172   F7.3  km/s  e_LV2.7GHz11  Error on line velocity at 2.7GHz
+                                      Thomas & Day, 1969AuJPA..11...19T
+ 176-182   F7.3  km/s  e_LV2.7GHz12  Error on line velocity at 2.7GHz
+                                      Wendker, 1970A&A.....4..378W
+ 186-192   F7.3  km/s  e_LV3.9GHz    Error on line velocity at 3.9GHz
+                                      Berlin et al., 1985AZh....62..229B
+ 196-202   F7.3  km/s  e_LV4.8GHz1   Error on line velocity at 4.8GHz, 1st part
+                                      of Kuchar & Clark, 1997ApJ...488..224K
+ 206-212   F7.3  km/s  e_LV4.8GHz2   Error on line velocity at 4.8GHz, 2nd part
+                                      of Kuchar & Clark, 1997ApJ...488..224K
+ 216-222   F7.3  km/s  e_LV5GHz1     Error on line velocity at 5GHz
+                                      Altenhoff et al., 1970A&AS....1..319A
+ 226-232   F7.3  km/s  e_LV5GHz2     Error on line velocity at 5GHz
+                                      Altenhoff et al., 1979A&AS...35...23A
+ 236-242   F7.3  km/s  e_LV5GHz3     Error on line velocity at 5GHz
+                                      Caswell & Haynes, 1987A&A...171..261C
+ 246-252   F7.3  km/s  e_LV5GHz4     Error on line velocity at 5GHz
+                                      Downes et al., 1980A&AS...40..379D
+ 256-262   F7.3  km/s  e_LV5GHz5     Error on line velocity at 5GHz
+                                      Mezger & Henderson, 1967ApJ...147..471M
+ 266-272   F7.3  km/s  e_LV5GHz6     Error on line velocity at 5GHz
+                                      Reifenstein et al., 1970A&A.....4..357R
+ 276-282   F7.3  km/s  e_LV5GHz7     Error on line velocity at 5GHz
+                                      Wilson et al., 1970A&A.....6..364W
+ 286-292   F7.3  km/s  e_LV5GHz8     Error on line velocity at 5GHz
+                                      Wink et al., 1982A&A...108..227W
+ 296-302   F7.3  km/s  e_LV14.7GHz   Error on line velocity at 14.7GHz
+                                      Wink et al., 1983A&A...127..211W
+ 306-312   F7.3  km/s  e_LV15GHz     Error on line velocity at 15GHz
+                                      Wink et al., 1982A&A...108..227W
+ 316-322   F7.3  km/s  e_LV86GHz     Error on line velocity at 86GHz
+                                      Wink et al., 1982A&A...108..227W
+--------------------------------------------------------------------------------
+
+Byte-by-byte Description of file: subcat8.dat
+--------------------------------------------------------------------------------
+   Bytes Format Units      Label      Explanations
+--------------------------------------------------------------------------------
+   1-  4   I4    ---       HII        Galactic HII region number
+   6- 16   A11   ---       Gname      Name based on galactic position
+  18- 19   I2    h         RAh        Right ascension (J2000.0)
+  21- 22   I2    min       RAm        Right ascension (J2000.0)
+  24- 27   F4.1  s         RAs        [0/60] Right ascension (J2000.0)
+      31   A1    ---       DE-        Declination sign (J2000.0)
+  32- 33   I2    deg       DEd        Declination (J2000.0)
+  36- 37   I2    arcmin    DEm        Declination (J2000.0)
+  39- 42   F4.1  arcsec    DEs        [0/60] Declination (J2000.0)
+  46- 52   F7.3  km/s      LW1.4GHz1  Line width at 1.4GHz
+                                       Altenhoff et al., 1970A&AS....1..319A
+  56- 62   F7.3  km/s      LW1.4GHz2  Line width at 1.4GHz
+                                       Felli & Churchwell, 1972A&AS....5..369F
+  66- 72   F7.3  km/s      LW2.7GHz1  Line width at 2.7GHz
+                                       Altenhoff et al., 1970A&AS....1..319A
+  76- 82   F7.3  km/s      LW2.7GHz2  Line width at 2.7GHz
+                                       Beard, 1966AuJPh..19..141B
+  86- 92   F7.3  km/s      LW2.7GHz3  Line width at 2.7GHz
+                                       Beard & Kerr, 1969AuJPh..22..121B
+  96-102   F7.3  km/s      LW2.7GHz4  Line width at 2.7GHz
+                                       Beard et al., 1969AuJPA..11...27B
+ 106-112   F7.3  km/s      LW2.7GHz5  Line width at 2.7GHz
+                                       Day et al., 1969AuJPA..11...11D
+ 116-122   F7.3  km/s      LW2.7GHz6  Line width at 2.7GHz
+                                       Day et al., 1970AuJPA..13...11D
+ 126-132   F7.3  km/s      LW2.7GHz7  Line width at 2.7GHz
+                                       Furst et al., 1987A&AS...69..403F
+ 136-142   F7.3  km/s      LW2.7GHz8  Line width at 2.7GHz
+                                       Goss & Day, 1970AuJPA..13....3G
+ 146-152   F7.3  km/s      LW2.7GHz9  Line width at 2.7GHz
+                                       Reich et al., 1986A&A...155..185R
+ 156-162   F7.3  km/s      LW2.7GHz10 Line width at 2.7GHz
+                                       Thomas & Day, 1969AuJPA..11....3T
+ 166-172   F7.3  km/s      LW2.7GHz11 Line width at 2.7GHz
+                                       Thomas & Day, 1969AuJPA..11...19T
+ 176-182   F7.3  km/s      LW2.7GHz12 Line width at 2.7GHz
+                                       Wendker, 1970A&A.....4..378W
+ 186-192   F7.3  km/s      LW3.9GHz   Line width at 3.9GHz
+                                       Berlin et al., 1985AZh....62..229B
+ 196-202   F7.3  km/s      LW4.8GHz1  Line width at 4.8GHz, 1st part of
+                                       Kuchar & Clark, 1997ApJ...488..224K
+ 206-212   F7.3  km/s      LW4.8GHz2  Line width at 4.8GHz, 2nd part of
+                                       Kuchar & Clark, 1997ApJ...488..224K
+ 216-222   F7.3  km/s      LW5GHz1    Line width at 5GHz
+                                       Altenhoff et al., 1970A&AS....1..319A
+ 226-232   F7.3  km/s      LW5GHz2    Line width at 5GHz
+                                       Altenhoff et al., 1979A&AS...35...23A
+ 236-242   F7.3  km/s      LW5GHz3    Line width at 5GHz
+                                       Caswell & Haynes, 1987A&A...171..261C
+ 246-252   F7.3  km/s      LW5GHz4    Line width at 5GHz
+                                       Downes et al., 1980A&AS...40..379D
+ 256-262   F7.3  km/s      LW5GHz5    Line width at 5GHz
+                                       Mezger & Henderson, 1967ApJ...147..471M
+ 266-272   F7.3  km/s      LW5GHz6    Line width at 5GHz
+                                       Reifenstein et al., 1970A&A.....4..357R
+ 276-282   F7.3  km/s      LW5GHz7    Line width at 5GHz
+                                       Wilson et al., 1970A&A.....6..364W
+ 286-292   F7.3  km/s      LW5GHz8    Line width at 5GHz
+                                       Wink et al., 1982A&A...108..227W
+ 296-302   F7.3  km/s      LW14.7GHz  Line width at 14.7GHz
+                                       Wink et al., 1983A&A...127..211W
+ 306-312   F7.3  km/s      LW15GHz    Line width at 15GHz
+                                       Wink et al., 1982A&A...108..227W
+ 316-322   F7.3  km/s      LW86GHz    Line width at 86GHz
+                                       Wink et al., 1982A&A...108..227W
+--------------------------------------------------------------------------------
+
+Byte-by-byte Description of file: subcat9.dat
+--------------------------------------------------------------------------------
+   Bytes Format Units      Label      Explanations
+--------------------------------------------------------------------------------
+   1-  4   I4    ---       HII        Galactic HII region number
+   6- 16   A11   ---       Gname      Name based on galactic position
+  18- 19   I2    h         RAh        Right ascension (J2000.0)
+  21- 22   I2    min       RAm        Right ascension (J2000.0)
+  24- 27   F4.1  s         RAs        [0/60] Right ascension (J2000.0)
+      31   A1    ---       DE-        Declination sign (J2000.0)
+  32- 33   I2    deg       DEd        Declination (J2000.0)
+  36- 37   I2    arcmin    DEm        Declination (J2000.0)
+  39- 42   F4.1  arcsec    DEs        [0/60] Declination (J2000.0)
+  46- 52   F7.3  km/s    e_LW1.4GHz1  Error on line width at 1.4GHz
+                                        Altenhoff et al., 1970A&AS....1..319A
+  56- 62   F7.3  km/s    e_LW1.4GHz2  Error on line width at 1.4GHz
+                                        Felli & Churchwell, 1972A&AS....5..369F
+  66- 72   F7.3  km/s    e_LW2.7GHz1  Error on line width at 2.7GHz
+                                        Altenhoff et al., 1970A&AS....1..319A
+  76- 82   F7.3  km/s    e_LW2.7GHz2  Error on line width at 2.7GHz
+                                        Beard, 1966AuJPh..19..141B
+  86- 92   F7.3  km/s    e_LW2.7GHz3  Error on line width at 2.7GHz
+                                        Beard & Kerr, 1969AuJPh..22..121B
+  96-102   F7.3  km/s    e_LW2.7GHz4  Error on line width at 2.7GHz
+                                       Beard et al., 1969AuJPA..11...27B
+ 106-112   F7.3  km/s    e_LW2.7GHz5  Error on line width at 2.7GHz
+                                       Day et al., 1969AuJPA..11...11D
+ 116-122   F7.3  km/s    e_LW2.7GHz6  Error on line width at 2.7GHz
+                                       Day et al., 1970AuJPA..13...11D
+ 126-132   F7.3  km/s    e_LW2.7GHz7  Error on line width at 2.7GHz
+                                       Furst et al., 1987A&AS...69..403F
+ 136-142   F7.3  km/s    e_LW2.7GHz8  Error on line width at 2.7GHz
+                                       Goss & Day, 1970AuJPA..13....3G
+ 146-152   F7.3  km/s    e_LW2.7GHz9  Error on line width at 2.7GHz
+                                       Reich et al., 1986A&A...155..185R
+ 156-162   F7.3  km/s    e_LW2.7GHz10 Error on line width at 2.7GHz
+                                       Thomas & Day, 1969AuJPA..11....3T
+ 166-172   F7.3  km/s    e_LW2.7GHz11 Error on line width at 2.7GHz
+                                       Thomas & Day, 1969AuJPA..11...19T
+ 176-182   F7.3  km/s    e_LW2.7GHz12 Error on line width at 2.7GHz
+                                       Wendker, 1970A&A.....4..378W
+ 186-192   F7.3  km/s    e_LW3.9GHz   Error on line width at 3.9GHz
+                                       Berlin et al., 1985AZh....62..229B
+ 196-202   F7.3  km/s    e_LW4.8GHz1  Error on line width at 4.8GHz, 1st part of
+                                       Kuchar & Clark, 1997ApJ...488..224K
+ 206-212   F7.3  km/s    e_LW4.8GHz2  Error on line width at 4.8GHz, 2nd part of
+                                       Kuchar & Clark, 1997ApJ...488..224K
+ 216-222   F7.3  km/s    e_LW5GHz1    Error on line width at 5GHz
+                                       Altenhoff et al., 1970A&AS....1..319A
+ 226-232   F7.3  km/s    e_LW5GHz2    Error on line width at 5GHz
+                                       Altenhoff et al., 1979A&AS...35...23A
+ 236-242   F7.3  km/s    e_LW5GHz3    Error on line width at 5GHz
+                                       Caswell & Haynes, 1987A&A...171..261C
+ 246-252   F7.3  km/s    e_LW5GHz4    Error on line width at 5GHz
+                                       Downes et al., 1980A&AS...40..379D
+ 256-262   F7.3  km/s    e_LW5GHz5    Error on line width at 5GHz
+                                       Mezger & Henderson, 1967ApJ...147..471M
+ 266-272   F7.3  km/s    e_LW5GHz6    Error on line width at 5GHz
+                                       Reifenstein et al., 1970A&A.....4..357R
+ 276-282   F7.3  km/s    e_LW5GHz7    Error on line width at 5GHz
+                                       Wilson et al., 1970A&A.....6..364W
+ 286-292   F7.3  km/s    e_LW5GHz8    Error on line width at 5GHz
+                                       Wink et al., 1982A&A...108..227W
+ 296-302   F7.3  km/s    e_LW14.7GHz  Error on line width at 14.7GHz
+                                       Wink et al., 1983A&A...127..211W
+ 306-312   F7.3  km/s    e_LW15GHz    Error on line width at 15GHz
+                                       Wink et al., 1982A&A...108..227W
+ 316-322   F7.3  km/s    e_LW86GHz    Error on line width at 86GHz
+                                       Wink et al., 1982A&A...108..227W
+--------------------------------------------------------------------------------
+
+Byte-by-byte Description of file: subcat10.dat
+--------------------------------------------------------------------------------
+   Bytes Format Units    Label      Explanations
+--------------------------------------------------------------------------------
+   1-  4   I4    ---     HII        Galactic HII region number
+   6- 16   A11   ---     Gname      Name based on galactic position
+  18- 19   I2    h       RAh        Right ascension (J2000.0)
+  21- 22   I2    min     RAm        Right ascension (J2000.0)
+  24- 27   F4.1  s       RAs        [0/60] Right ascension (J2000.0)
+      31   A1    ---     DE-        Declination sign (J2000.0)
+  32- 33   I2    deg     DEd        Declination (J2000.0)
+  36- 37   I2    arcmin  DEm        Declination (J2000.0)
+  39- 42   F4.1  arcsec  DEs        [0/60] Declination (J2000.0)
+  46- 52   F7.3  K       LT1.4GHz1  Line temperature at 1.4GHz
+                                     Altenhoff et al., 1970A&AS....1..319A
+  56- 62   F7.3  K       LT1.4GHz2  Line temperature at 1.4GHz
+                                     Felli & Churchwell, 1972A&AS....5..369F
+  66- 72   F7.3  K       LT2.7GHz1  Line temperature at 2.7GHz
+                                     Altenhoff et al., 1970A&AS....1..319A
+  76- 82   F7.3  K       LT2.7GHz2  Line temperature at 2.7GHz
+                                     Beard, 1966AuJPh..19..141B
+  86- 92   F7.3  K       LT2.7GHz3  Line temperature at 2.7GHz
+                                     Beard & Kerr, 1969AuJPh..22..121B
+ 96-102   F7.3  K       LT2.7GHz4  Line temperature at 2.7GHz
+                                     Beard et al., 1969AuJPA..11...27B
+ 106-112   F7.3  K       LT2.7GHz5  Line temperature at 2.7GHz
+                                     Day et al., 1969AuJPA..11...11D
+ 116-122   F7.3  K       LT2.7GHz6  Line temperature at 2.7GHz
+                                     Day et al., 1970AuJPA..13...11D
+ 126-132   F7.3  K       LT2.7GHz7  Line temperature at 2.7GHz
+                                     Furst et al., 1987A&AS...69..403F
+ 136-142   F7.3  K       LT2.7GHz8  Line temperature at 2.7GHz
+                                     Goss & Day, 1970AuJPA..13....3G
+ 146-152   F7.3  K       LT2.7GHz9  Line temperature at 2.7GHz
+                                     Reich et al., 1986A&A...155..185R
+ 156-162   F7.3  K       LT2.7GHz10 Line temperature at 2.7GHz
+                                     Thomas & Day, 1969AuJPA..11....3T
+ 166-172   F7.3  K       LT2.7GHz11 Line temperature at 2.7GHz
+                                     Thomas & Day, 1969AuJPA..11...19T
+ 176-182   F7.3  K       LT2.7GHz12 Line temperature at 2.7GHz
+                                     Wendker, 1970A&A.....4..378W
+ 186-192   F7.3  K       LT3.9GHz   Line temperature at 3.9GHz
+                                     Berlin et al., 1985AZh....62..229B
+ 196-202   F7.3  K       LT4.8GHz1  Line temperature at 4.8GHz, 1st part of
+                                     Kuchar & Clark, 1997ApJ...488..224K
+ 206-212   F7.3  K       LT4.8GHz2  Line temperature at 4.8GHz, 2nd part of
+                                     Kuchar & Clark, 1997ApJ...488..224K
+ 216-222   F7.3  K       LT5GHz1    Line temperature at 5GHz
+                                     Altenhoff et al., 1970A&AS....1..319A
+ 226-232   F7.3  K       LT5GHz2    Line temperature at 5GHz
+                                     Altenhoff et al., 1979A&AS...35...23A
+ 236-242   F7.3  K       LT5GHz3    Line temperature at 5GHz
+                                     Caswell & Haynes, 1987A&A...171..261C
+ 246-252   F7.3  K       LT5GHz4    Line temperature at 5GHz
+                                     Downes et al., 1980A&AS...40..379D
+ 256-262   F7.3  K       LT5GHz5    Line temperature at 5GHz
+                                     Mezger & Henderson, 1967ApJ...147..471M
+ 266-272   F7.3  K       LT5GHz6    Line temperature at 5GHz
+                                     Reifenstein et al., 1970A&A.....4..357R
+ 276-282   F7.3  K       LT5GHz7    Line temperature at 5GHz
+                                     Wilson et al., 1970A&A.....6..364W
+ 286-292   F7.3  K       LT5GHz8    Line temperature at 5GHz
+                                     Wink et al., 1982A&A...108..227W
+ 296-302   F7.3  K       LT14.7GHz  Line temperature at 14.7GHz
+                                     Wink et al., 1983A&A...127..211W
+ 306-312   F7.3  K       LT15GHz    Line temperature at 15GHz
+                                     Wink et al., 1982A&A...108..227W
+ 316-322   F7.3  K       LT86GHz    Line temperature at 86GHz
+                                     Wink et al., 1982A&A...108..227W
+--------------------------------------------------------------------------------
+
+Byte-by-byte Description of file: subcat11.dat
+--------------------------------------------------------------------------------
+   Bytes Format Units    Label      Explanations
+--------------------------------------------------------------------------------
+   1-  4   I4    ---     HII        Galactic HII region number
+   6- 16   A11   ---     Gname      Name based on galactic position
+  18- 19   I2    h       RAh        Right ascension (J2000.0)
+  21- 22   I2    min     RAm        Right ascension (J2000.0)
+  24- 27   F4.1  s       RAs        [0/60] Right ascension (J2000.0)
+      31   A1    ---     DE-        Declination sign (J2000.0)
+  32- 33   I2    deg     DEd        Declination (J2000.0)
+  36- 37   I2    arcmin  DEm        Declination (J2000.0)
+  39- 42   F4.1  arcsec  DEs        [0/60] Declination (J2000.0)
+  46- 54   F9.4  K     e_LT1.4GHz1  Error on line temperature at 1.4GHz
+                                     Altenhoff et al., 1970A&AS....1..319A
+  58- 66   F9.4  K     e_LT1.4GHz2  Error on line temperature at 1.4GHz
+                                     Felli & Churchwell, 1972A&AS....5..369F
+  70- 78   F9.4  K     e_LT2.7GHz1  Error on line temperature at 2.7GHz
+                                     Altenhoff et al., 1970A&AS....1..319A
+  82- 90   F9.4  K     e_LT2.7GHz2  Error on line temperature at 2.7GHz
+                                     Beard, 1966AuJPh..19..141B
+ 94-102   F9.4  K     e_LT2.7GHz3  Error on line temperature at 2.7GHz
+                                     Beard & Kerr, 1969AuJPh..22..121B
+ 106-114   F9.4  K     e_LT2.7GHz4  Error on line temperature at 2.7GHz
+                                     Beard et al., 1969AuJPA..11...27B
+ 118-126   F9.4  K     e_LT2.7GHz5  Error on line temperature at 2.7GHz
+                                     Day et al., 1969AuJPA..11...11D
+ 130-138   F9.4  K     e_LT2.7GHz6  Error on line temperature at 2.7GHz
+                                     Day et al., 1970AuJPA..13...11D
+ 142-150   F9.4  K     e_LT2.7GHz7  Error on line temperature at 2.7GHz
+                                     Furst et al., 1987A&AS...69..403F
+ 154-162   F9.4  K     e_LT2.7GHz8  Error on line temperature at 2.7GHz
+                                     Goss & Day, 1970AuJPA..13....3G
+ 166-174   F9.4  K     e_LT2.7GHz9  Error on line temperature at 2.7GHz
+                                     Reich et al., 1986A&A...155..185R
+ 178-186   F9.4  K     e_LT2.7GHz10 Error on line temperature at 2.7GHz
+                                     Thomas & Day, 1969AuJPA..11....3T
+ 190-198   F9.4  K     e_LT2.7GHz11 Error on line temperature at 2.7GHz
+                                     Thomas & Day, 1969AuJPA..11...19T
+ 202-210   F9.4  K     e_LT2.7GHz12 Error on line temperature at 2.7GHz
+                                     Wendker, 1970A&A.....4..378W
+ 214-222   F9.4  K     e_LT3.9GHz   Error on line temperature at 3.9GHz
+                                     Berlin et al., 1985AZh....62..229B
+ 226-234   F9.4  K     e_LT4.8GHz1  Error on line temperature at 4.8GHz, 1st
+                                     part of Kuchar & Clark, 1997ApJ...488..224K
+ 238-246   F9.4  K     e_LT4.8GHz2  Error on line temperature at 4.8GHz, 2nd
+                                     part of Kuchar & Clark, 1997ApJ...488..224K
+ 250-258   F9.4  K     e_LT5GHz1    Error on line temperature at 5GHz
+                                     Altenhoff et al., 1970A&AS....1..319A
+ 262-270   F9.4  K     e_LT5GHz2    Error on line temperature at 5GHz
+                                     Altenhoff et al., 1979A&AS...35...23A
+ 274-282   F9.4  K     e_LT5GHz3    Error on line temperature at 5GHz
+                                     Caswell & Haynes, 1987A&A...171..261C
+ 286-294   F9.4  K     e_LT5GHz4    Error on line temperature at 5GHz
+                                     Downes et al., 1980A&AS...40..379D
+ 298-306   F9.4  K     e_LT5GHz5    Error on line temperature at 5GHz
+                                     Mezger & Henderson, 1967ApJ...147..471M
+ 310-318   F9.4  K     e_LT5GHz6    Error on line temperature at 5GHz
+                                     Reifenstein et al., 1970A&A.....4..357R
+ 322-330   F9.4  K     e_LT5GHz7    Error on line temperature at 5GHz
+                                     Wilson et al., 1970A&A.....6..364W
+ 334-342   F9.4  K     e_LT5GHz8    Error on line temperature at 5GHz
+                                     Wink et al., 1982A&A...108..227W
+ 346-354   F9.4  K     e_LT14.7GHz  Error on line temperature at 14.7GHz
+                                     Wink et al., 1983A&A...127..211W
+ 358-366   F9.4  K     e_LT15GHz    Error on line temperature at 15GHz
+                                     Wink et al., 1982A&A...108..227W
+ 370-378   F9.4  K     e_LT86GHz    Error on line temperature at 86GHz
+                                     Wink et al., 1982A&A...108..227W
+--------------------------------------------------------------------------------
+
+Acknowledgements: Roberta Paladini <paladini@ap.sissa.it>
+
+================================================================================
+(End)                                          Patricia Bauer [CDS]  29-Nov-2002

@@ -1,0 +1,35 @@
+;+
+; NAME:
+;  cwd
+; PURPOSE:
+; DESCRIPTION:
+;
+; CATEGORY:
+;  Miscellaneous
+; CALLING SEQUENCE:
+;  pwd
+; INPUTS:
+;  None.
+; OPTIONAL INPUT PARAMETERS:
+;
+; KEYWORD INPUT PARAMETERS:
+;
+; OUTPUTS:
+;
+; KEYWORD OUTPUT PARAMETERS:
+;
+; COMMON BLOCKS:
+;
+; SIDE EFFECTS:
+;
+; RESTRICTIONS:
+;
+; PROCEDURE:
+;
+; MODIFICATION HISTORY:
+;
+;-
+FUNCTION cwd,dummy=dummy
+   cd,current=current
+   return,current
+end

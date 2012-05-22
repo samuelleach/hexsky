@@ -1,0 +1,492 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage{epsfig}
+\usepackage{latexsym}
+\usepackage{graphicx}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{natbib}
+\usepackage{xcolor}
+\usepackage{verbatim}
+%
+\topmargin=-3cm
+\topmargin=-1cm
+\oddsidemargin=-1cm
+\evensidemargin=-1cm
+\textwidth=17cm
+%
+\textheight=27cm
+\textheight=25cm
+\raggedbottom
+\sloppy
+
+
+
+
+
+% Bibliography and bibfile
+\def\aj{AJ}%
+          % Astronomical Journal
+\def\actaa{Acta Astron.}%
+          % Acta Astronomica
+\def\araa{ARA\&A}%
+          % Annual Review of Astron and Astrophys
+\def\apj{ApJ}%
+          % Astrophysical Journal
+\def\apjl{ApJ}%
+          % Astrophysical Journal, Letters
+\def\apjs{ApJS}%
+          % Astrophysical Journal, Supplement
+\def\ao{Appl.~Opt.}%
+          % Applied Optics
+\def\apss{Ap\&SS}%
+          % Astrophysics and Space Science
+\def\aap{A\&A}%
+          % Astronomy and Astrophysics
+\def\aapr{A\&A~Rev.}%
+          % Astronomy and Astrophysics Reviews
+\def\aaps{A\&AS}%
+          % Astronomy and Astrophysics, Supplement
+\def\azh{AZh}%
+          % Astronomicheskii Zhurnal
+\def\baas{BAAS}%
+          % Bulletin of the AAS
+\def\bac{Bull. astr. Inst. Czechosl.}%
+          % Bulletin of the Astronomical Institutes of Czechoslovakia 
+\def\caa{Chinese Astron. Astrophys.}%
+          % Chinese Astronomy and Astrophysics
+\def\cjaa{Chinese J. Astron. Astrophys.}%
+          % Chinese Journal of Astronomy and Astrophysics
+\def\icarus{Icarus}%
+          % Icarus
+\def\jcap{J. Cosmology Astropart. Phys.}%
+          % Journal of Cosmology and Astroparticle Physics
+\def\jrasc{JRASC}%
+          % Journal of the RAS of Canada
+\def\mnras{MNRAS}%
+          % Monthly Notices of the RAS
+\def\memras{MmRAS}%
+          % Memoirs of the RAS
+\def\na{New A}%
+          % New Astronomy
+\def\nar{New A Rev.}%
+          % New Astronomy Review
+\def\pasa{PASA}%
+          % Publications of the Astron. Soc. of Australia
+\def\pra{Phys.~Rev.~A}%
+          % Physical Review A: General Physics
+\def\prb{Phys.~Rev.~B}%
+          % Physical Review B: Solid State
+\def\prc{Phys.~Rev.~C}%
+          % Physical Review C
+\def\prd{Phys.~Rev.~D}%
+          % Physical Review D
+\def\pre{Phys.~Rev.~E}%
+          % Physical Review E
+\def\prl{Phys.~Rev.~Lett.}%
+          % Physical Review Letters
+\def\pasp{PASP}%
+          % Publications of the ASP
+\def\pasj{PASJ}%
+          % Publications of the ASJ
+\def\qjras{QJRAS}%
+          % Quarterly Journal of the RAS
+\def\rmxaa{Rev. Mexicana Astron. Astrofis.}%
+          % Revista Mexicana de Astronomia y Astrofisica
+\def\skytel{S\&T}%
+          % Sky and Telescope
+\def\solphys{Sol.~Phys.}%
+          % Solar Physics
+\def\sovast{Soviet~Ast.}%
+          % Soviet Astronomy
+\def\ssr{Space~Sci.~Rev.}%
+          % Space Science Reviews
+\def\zap{ZAp}%
+          % Zeitschrift fuer Astrophysik
+\def\nat{Nature}%
+          % Nature
+\def\iaucirc{IAU~Circ.}%
+          % IAU Cirulars
+\def\aplett{Astrophys.~Lett.}%
+          % Astrophysics Letters
+\def\apspr{Astrophys.~Space~Phys.~Res.}%
+          % Astrophysics Space Physics Research
+\def\bain{Bull.~Astron.~Inst.~Netherlands}%
+          % Bulletin Astronomical Institute of the Netherlands
+\def\fcp{Fund.~Cosmic~Phys.}%
+          % Fundamental Cosmic Physics
+\def\gca{Geochim.~Cosmochim.~Acta}%
+          % Geochimica Cosmochimica Acta
+\def\grl{Geophys.~Res.~Lett.}%
+          % Geophysics Research Letters
+\def\jcp{J.~Chem.~Phys.}%
+          % Journal of Chemical Physics
+\def\jgr{J.~Geophys.~Res.}%
+          % Journal of Geophysics Research
+\def\jqsrt{J.~Quant.~Spec.~Radiat.~Transf.}%
+          % Journal of Quantitiative Spectroscopy and Radiative Trasfer
+\def\memsai{Mem.~Soc.~Astron.~Italiana}%
+          % Mem. Societa Astronomica Italiana
+\def\nphysa{Nucl.~Phys.~A}%
+          % Nuclear Physics A
+\def\physrep{Phys.~Rep.}%
+          % Physics Reports
+\def\physscr{Phys.~Scr}%
+          % Physica Scripta
+\def\planss{Planet.~Space~Sci.}%
+          % Planetary Space Science
+\def\procspie{Proc.~SPIE}%
+          % Proceedings of the SPIE
+\let\astap=\aap
+\let\apjlett=\apjl
+\let\apjsupp=\apjs
+\let\applopt=\ao
+
+\newcommand{\Fc}{{\cal F}}
+\newcommand{\Xib}{\mbox{\boldmath $\Xi$}}
+
+\title{EBEX `\texttt{hexsky}' pointing simulator documentation, v0.2} \author{Sam Leach}
+\begin{document} \maketitle
+
+\begin{abstract}
+  The goal of this memo is to provide documentation for the
+  balloon-borne scanning CMB experiment simulator
+  \texttt{hexsky}. These codes allow to simulate the boresight and
+  detector pointing from an EBEX `schedule file', automatically
+  documenting the scanning strategy.
+\end{abstract}
+
+
+\tableofcontents
+
+%\citet{2009arXiv0912.2338V} recently published a catalogue of
+
+\section{Introduction}
+
+This memo summarises the main features of the balloon-borne scanning
+CMB experiment simulator known as the `\texttt{hexsky}' library. The goal
+of these codes is to simulate the pointing from and validate the
+content of EBEX \emph{schedule files}, which are list of pointing
+commands for automated in-flight scanning. In this simulations
+context, schedule files along with a \emph{mission file} are first
+parsed by IDL, and then converted into parameter files that can be
+used by the \texttt{hexsky} binary. Pointing is outputted into a dirfile
+and then subsequently validated by automatically producing a document
+which gives a high level overview of the scanning strategy.
+
+
+
+\section{Installation}
+
+In this section we reproduce the content of the
+\texttt{hexsky/INSTALL} file which describes installation,
+dependencies and gives and an example `quick start' run of the codes.
+
+\verbatiminput{../INSTALL}
+
+
+%% \begin{figure}
+%% \begin{center}
+%% \psfig{file=figures/12302011.png,width=5.5in}
+%% \psfig{file=figures/1142012.png,width=5.5in}
+%% \caption{EBEX visibility and calibrator plot. (Upper panel) Accessing
+%%   Cen A from around January 1st 2012 onwards by relaxing the anti-sun
+%%   constraint to $\pm 90^\circ$. (Lower panel) Between 14-18 January
+%%   2012 Cen A is blocked by the moon.} \label{fig:ebex2}
+%% \end{center}
+%% \end{figure}
+
+
+%% \scriptsize
+%% \begin{tabular}{|c|cc|cc|cc|cc|}
+%% \hline
+%% %\tableline
+%% Source		&90 GHz		&90 GHz		&150 GHz	&150 GHz	&240 GHz	&240 GHz	&400 GHz	&400 GHz\\
+%% 		&1$\sigma_{b}$ (Jy)	&2$\sigma_{b}$ (Jy)	&1$\sigma_{b}$ (Jy)	&2$\sigma_{b}$ (Jy)	&1$\sigma_{b}$ (Jy)	&2$\sigma_{b}$ (Jy)	&1$\sigma_{b}$ (Jy)	&2$\sigma_{b}$ (Jy)\\
+%% \hline
+%% %\tableline
+%% Carina		&72.4$\pm$8.2	&214$\pm19$	&37.9$\pm$4.1	&131$\pm$13	&132$\pm$18	&410$\pm$56	&446$\pm$145	&1324$\pm$419\\
+%% RCW38		&60.8$\pm$6.2	&137$\pm$16	&51.7$\pm$4.0	&122$\pm$12	&126$\pm$17	&298$\pm$42	&406$\pm$115	&1002$\pm$298\\
+%% IRAS1022	&60.7$\pm$4.6	&143$\pm$15	&42.2$\pm$2.9	&119$\pm$11	&107$\pm$15	&282$\pm$38	&320$\pm$94	&904$\pm$278\\
+%% NGC3603		&55.6$\pm$6.1	&126$\pm$14	&42$\pm$1.2	&107$\pm$4.4	&101$\pm$14	&249$\pm$35	&308$\pm$99	&802$\pm$256\\
+%% NGC3576		&32.6$\pm$3.6	&74.6$\pm$9.1	&32.7$\pm$1.5	&70.1$\pm$6.0	&87.9$\pm$10	&201$\pm$24	&360$\pm$102	&727$\pm$196\\
+%% IRAS08576	&9.1$\pm$0.7	&20.6$\pm$2.6	&11.8$\pm$0.7	&31.9$\pm$2.2	&55.2$\pm$6.3	&158$\pm$18	&230$\pm$59	&667$\pm$173\\
+%% 0537-441	&1.8$\pm$0.4	&3.8$\pm$1.1	&1.5$\pm$0.2	&3.1$\pm$0.6	&1.3$\pm$0.8	&2.3$\pm$2.1	&--	&--\\
+%% 0521-365	&1.5$\pm$0.5	&2.9$\pm$1.4	&1.3$\pm$0.3	&2.9$\pm$0.7	&1.3$\pm$0.7	&2.6$\pm$0.4	&--	&--\\
+%% 0438-43		&1.4$\pm$0.5	&3.2$\pm$1.3	&1.2$\pm$0.2	&2.9$\pm$0.6	&--		&--		&--	&--\\
+%% \hline
+%% %\tableline
+%% \end{tabular}
+%% \end{center}
+%% \caption{\emph{(Table and caption take from
+%% \citep{2003astro.ph..1599C}).} Fluxes in Jy of sources as determined
+%% by observations with BOOMERANG. The 1$\sigma_{b}$ and 2$\sigma_{b}$
+%% fluxes are the integrated fluxes within radii of 1 and 2
+%% $\sigma_{beam}$ respectively. Errors are statistical only; they do not
+%% include systematic errors due to uncertainty in the beam size,
+%% background subtraction or calibration. For a point source observed
+%% with a gaussian beam, the integrated fluxes out to 1$\sigma_{b}$ and
+%% 2$\sigma_{b}$ are 0.393 and 0.865 of the source flux, respectively.
+%% The extra-galactic sources are point sources, whereas the Galactic
+%% sources are somewhat extended.}
+%% \label{tbl2}
+%% \end{table*}
+
+
+\section{Library directory structure}
+
+This section is a brief inventory of the \texttt{hexsky} library
+in order to provide orientation towards some of the codes.
+\\
+\\
+{\bf \texttt{bin/}} - Contains binaries. The binary of the \texttt{hexsky} C
+code is placed here.
+\\
+\\
+{\bf \texttt{data/}} - Contains various small bits of plain text data,
+including some instrument bandpasses, locations of detectors in the
+focalplane ({\texttt ebex\_fpdb.txt}), several source catalogs. In
+addition it contains the \texttt{getdata.sh} script for downloading
+larger files (Healpix foreground maps).
+\\
+\\
+{\bf \texttt{missionfiles/}} - Contains plain text `mission files'.
+\\
+\\
+{\bf \texttt{parfiles/}} - Contains example parameter files for running the
+\texttt{hexsky} binary in standalone mode. The parameter file \texttt{example\_ldb.par}
+has the privileged role of being the `template' parameter file, as defined in
+\texttt{pro/hexsky/hexskylib.pro}.
+\\
+\\
+{\bf \texttt{pro/}} - Contains the IDL library of the author. The guts of the scanning related
+codes are in \texttt{pro/hexsky}, \texttt{pro/ebexcommanding}, \texttt{pro/commandfile\_interface},
+\texttt{pro/astro}, and \texttt{pro/ebexfp}.  
+\\
+\\
+{\bf \texttt{python/}} - Contains python codes. Currently there is just \texttt{batterySimulation.py}
+code written by Alexander Smith and Britt Reichborn-Kjennerud (Columbia).
+\\
+\\
+{\bf \texttt{schedulefiles/}} - Contains the \texttt{.sch} schedule files.
+\\
+\\
+{\bf \texttt{src/}} - Contains the makefile and source code for the \texttt{hexsky} binary.
+\\
+\\
+{\bf \texttt{strategyfiles/}} - Contains the \texttt{.ess} (EBEX
+scanning strategy) files. These are parameters files needed for producing a
+scanning strategy with \texttt{suggest\_scanning\_strategy.pro}
+
+\section{Inputs}
+
+The three inputs to a simulation run are a \emph{mission file}, a
+\emph{schedule file} and a \emph{focal plane file}.
+
+\begin{itemize}
+\item The mission file contains free parameters relating to the mission:
+Launch date, launch location orbit speed, sample rate, elevation
+constraints are a few notable examples. Additional parameters can be
+entered into the mission file and will be read into a mission IDL
+struct without need to recode the parameter file parsing. The mission
+file is parsed by the high-level main driver routine
+\texttt{pro/hexsky/hexsky\_test\_driver.pro}.
+
+\item The schedule file encodes the scanning strategy in the form of a
+list of scanning commands that referenced to a specific time given in
+the first line of the file. The schedule file is first parsed in
+the \texttt{pro/hexsky/hexsky\_test\_driver.pro} driver and stored
+using the schedule and command struct defined in
+\texttt{pro/commandfile\_interface/schedule\_\_define.pro} and
+\texttt{pro/commandfile\_interface/command\_\_define.pro}
+respectively. After parsing the schedule file is converted into
+parameter files that can are used for executing the \texttt{hexsky}
+binary. This conversion is performed in
+\texttt{pro/hexsky/simulate\_pointing.pro}, which must be maintained
+along with the two files
+\texttt{pro/ebexcommanding/get\_command\_list.pro} and
+\texttt{pro/ebexcommanding/get\_scan\_period\_estimate.pro} in order
+to simulate new or modified commands.
+
+An explicit definition of the schedule file will be added to this
+document in future revisions. Note that the \texttt{schedulefiles/}
+directory contains a mixture of `UTC' schedule files and `LST'
+schedule files. The LST schedule files are the only ones can be used
+the flight computer, with each command's two timing parameters (day
+and hour) given in local sidereal time, as well as using a special
+convention for the reference time in the first line of the schedule file.
+The UTC schedule files are a
+standard `internal' to the \texttt{hexsky} library in which the
+commands timing parameters are given in UTC timing (for subsequent use in the
+\texttt{hexsky} binary pointing simulator parameter files). Tools for converting between
+UTC and LST schedule files are found in \texttt{pro/commandfile\_interface/}.
+
+\item The focal plane file contains information about the locations of
+detectors in the focal plane, and classifies the detectors according
+to the channel to which they belong. The current focal plane file is
+given by \texttt{data/ebex\_fpdb.txt}. It is first parsed in the
+\texttt{pro/hexsky/hexsky\_test\_driver.pro} by the
+\texttt{pro/ebexfp/read\_focalplanefile.pro} code and stored in an
+array of detector structs, defined in
+\texttt{pro/ebexfp/detector\_\_define.pro}.
+
+
+\end{itemize}
+
+
+\section{Outputs}
+
+In this section we list the main output from a simulation run. By
+default, these will all be found in the \texttt{output/} directory of
+the working directory. Some of the output files will have filenames
+partly composed by the fileroot of the schedule file filename.
+
+
+\begin{itemize}
+\item \texttt{command\_firstsample.dat} - Plain text file containing
+  the first sample and nsample for each command in the slow dirfile.
+
+\item \texttt{data/} - Column data describing the survey geomety and
+  depth ($f_{sky}$ vs ($\mu$K.arcmin)$^{-1}$). Arranged by channel subdirectories
+  \texttt{boresight/}, \texttt{150/}, \texttt{250/}, and \texttt{410/}.
+
+
+
+\item \texttt{dirfile/} - This is main pointing output from the
+\texttt{hexsky} binary. The available fields are AZ, EL, RA, DEC, BETA
+(orientation), ROLL (roll pendulation, to be added to BETA), LON, LAT,
+LST (local sidereal time in hours) and RJD (reduced Julian day, where
+the offset to be added, RJD0$=$2454900, is defined both in
+\texttt{pro/hexsky/defineconstants.pro} and in
+\texttt{src/utilities\_pointing.h}. In addition the fields AZ\_SUN,
+EL\_SUN, AZ\_MOON, and EL\_MOON are added in `post-processing' of the dirfile
+by \texttt{pro/hexsky/hexsky\_write\_sunazel\_fields.pro}. The
+sample rate of this dirfile is set in the mission file with the
+parameter \texttt{tsamp\_sec}, which will also control the overall run
+time of the codes.
+
+\item \texttt{doc/} - Documentation (postscript files) arranged by
+  channel subdirectories \texttt{boresight/}, \texttt{150/},
+  \texttt{250/}, and \texttt{410/}. This documentation is produced by
+  \texttt{pro/hexsky/get\_scanning\_strategy\_documentation.pro}
+
+\item \texttt{fp/} - In the case where a focal plane rotation is
+  desired (using the parameter \texttt{focalplane\_phi0\_deg} in
+  \texttt{hexsky\_test\_driver.pro}) the focal plane data is found in
+  this directory.
+
+\item \texttt{hexsky\_fullsamplerate\_tasks.txt} - This is a script to
+which can be run in order to produce a separate dirfile
+(\texttt{fullsamplerate/dirfile}) with boresight pointing at the full
+sample rate, as defined by the parameter \texttt{tsamp\_fast\_sec} in
+the mission file. It only depends on being able to run the
+\texttt{hexsky} binary code and corresponding full sample rate
+parameter files found in the \texttt{parfiles/} directory.
+
+\item \texttt{hexsky\_outfiles/} - Various small pieces of output data
+  from the \texttt{hexsky} binary including the
+  \texttt{command*\_azel\_repointing.dat} files which contain az/el
+  repointings, used by \texttt{plot\_schedule\_azel.pro}.
+
+\item \texttt{logfiles/} - Output logfiles containing the standard
+  output from the \texttt{hexsky} binary.
+
+
+\item \texttt{maps/} - Output Healpix maps by channel subdirectories
+  \texttt{boresight/}, \texttt{150/}, \texttt{250/}, and \texttt{410/}.
+
+\begin{itemize}
+
+\item \texttt{tint\_*.fits} - Healpix maps containing the total
+  integration time, in Celestial coordinates. The map
+  \texttt{tint\_bycommand*.fits} contains several columns, one
+  corresponding to each type EBEX command \texttt{(cmb\_scan},
+  \texttt{calibrator\_scan} etc).
+
+\item \texttt{visibility\_*.fits} - A Healpix map containing a `sky
+visibility map' showing which portion of the sky is visible (and for
+how many hours over a 24 hour period) from the site defined in the mission
+file, at the start of the first command.
+
+\end{itemize}
+
+\begin{itemize}
+
+\item \texttt{scanning\_doc\_*.pdf} - This is a high level and command
+by command latex document in PDF format summarising of the scanning
+strategy. The main driver routine that produces this document one the
+dirfile pointing has been generated is
+\texttt{pro/hexsky/get\_scanning\_strategy\_documentation.pro}.
+
+\end{itemize}
+
+\item \texttt{parfiles/} - Parameter files used by the \texttt{hexsky}
+  binary both at slow and full sample rate.
+
+\item \texttt{ps/} - Contains all the postscript figures that are used in the
+
+\item \texttt{*\_utc.sch} - This is a `UTC schedule file' (an internal
+format for simulations, not to be used with the flight computer) in
+which the timing parameter (second parameter of each command) is in UTC hours.
+
+
+\item \texttt{lst\_*.sch} - The above UTC schedule file is converted
+back into an LST schedule file, given information about the orbit
+speed and launch date/time.
+
+\item \texttt{WARNINGS\_readme} - A plain text file containing a list
+  of `warnings' encountered during the schedule file simulation. The
+  following warning types are implemented:
+  \begin{itemize}
+  \item 1: Expected duration of command is longer than time to next command.
+  \item 2: Expected duration of command is (more than 10 percent) shorter than time to next command.
+  \item 3: Command exceeding max allowed elevation.
+  \item 4: Command Below min allowed elevation.
+  \item 5: ANTI-SUN WARNING: DAY TIME. During the command the boresight violates the anti-sun constraint.
+  \item 6: ANTI-MOON WARNING. During the command the boresight violates the anti-moon constraint.
+  \end{itemize}
+
+  A typical warning might look like this:
+
+\texttt{5 120 60.8565 57.9042 0.0000 \#  [ ANTI-SUN WARNING: DAY TIME ]}
+
+The first column is the warning type, as defined above; The second
+column gives the schedule file command to which the warning applies (1
+corresponds to the first command in the schedule file); The next three
+numbers are any particular quantities relating to the warning (in this
+case the azimuth distance [deg] from the anti-sun direction at the
+beginning and end of the command); Finally, a comment follows after
+the \# sign.
+
+\end{itemize}
+
+\subsection{Dirfile format and units}
+
+The `full sample rate' pointing dirfile has the \texttt{format} file
+shown just below which lists the dirfile entries and their level of
+precision. \texttt{AZ} and \texttt{EL} are telescope azimuth and
+elevation in degrees (inclusive of any azimuth and elevation
+pendulations if enabled). \texttt{LST} is local sidereal time in
+hours. \texttt{LON} and \texttt{LAT} are gondola longitude and
+latitude in degrees. \texttt{RA}, \texttt{DEC}, \texttt{BETA} and
+\texttt{ROLL} are telescope Right Ascension, Declination, orientation
+and Roll pendulations, all in radians. \texttt{RJD} is a convention
+for a Reduced Julian Day measured in days from an offset
+\texttt{RJD0=2454900} defined both in
+\texttt{src/utilities\_pointing.h} and in
+\texttt{pro/hexsky/define\_constants.pro}.
+
+
+\verbatiminput{format}
+
+
+In addition to these entries, the `slow sample rate' dirfile contains
+extra entries (written by the IDL code) which describe
+\texttt{AZ\_SUN},\texttt{EL\_SUN},\texttt{AZ\_MOON} and
+\texttt{EL\_MOON}, which give the azimuth and elevation in degrees of
+the Sun and Moon.
+
+
+\bibliographystyle{aa}
+\bibliography{hexsky}
+
+\end{document}

@@ -1,0 +1,3 @@
+parameterfile = schedulefiles/na_mission.par
+schedulefile = schedulefiles/saturn_may21.sch
+datafile = output/dirfile

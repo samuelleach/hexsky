@@ -1,0 +1,59 @@
+# Date
+year = 2009
+month = 6
+day = 11
+launch_utc = 14.
+
+# Start location
+latitude_deg        =  -22.5
+longitude_start_deg = -67.75
+
+#latitude_deg        =   34.50
+#longitude_start_deg = -105.74
+
+#latitude_deg        =   34.5
+#longitude_start_deg = -110.50
+
+#At around 10pm Fort Sumner
+#longitude_start_deg = -113.00
+
+# orbitspeed is in orbits per day e.g. orbitspeed = 0.1
+# gives 360 degrees orbit in longitude in 10 days
+orbitspeed = 0.0
+
+# Scanning constraints
+elevation_calibrator_lowerlimit_deg = 45.0
+elevation_lowerlimit_deg            = 45.0
+elevation_upperlimit_deg            = 90.0
+
+antisun_constraint_deg  = 45.
+antimoon_constraint_deg = 135.
+
+# Temperature at which the solar modules are running
+# (higher temperature mean less power consumption. A. Smith, Columbia)
+solar_module_temp_celsius = 110.
+
+# Gondola chopping turnaround parameters
+#maxaccel_deg = 1.8
+#starcamstop_sec = 1.
+maxaccel_deg = 0.3      #Parameters chosen to match more closely
+starcamstop_sec = 0.02   #actual EBEX scan pattern.
+trepointing_sec = 7.
+
+# Noise and instrument parameters
+tsamp_sec =   0.05
+taubolo_sec = 0.009
+fknee_hz = 0.5
+alpha = 2.
+NET_1 = 193.33 
+NET_2 = 398.67 
+NET_3 = 3077.30 
+NET = 193.33
+FWHM = 8.
+fhwp_hz = 2.0
+tsamp_fast_sec = 0.005243
+minimap_size_arcmin = 8.
+
+#NET_150 = 145×2 / 1.5 = 193.33 uK √Hz
+#NET_250 = 299×2 / 1.5 = 398.67 uK √Hz
+#NET_410 = 2308×2 / 1.5 = 3077.30 uK √Hz
